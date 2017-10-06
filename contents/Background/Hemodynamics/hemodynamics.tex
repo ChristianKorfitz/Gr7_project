@@ -8,26 +8,30 @@ It is possible to measure different blood pressures at different places in the c
 
 Effects on the blood pressure have cardiac output, total periphery resistance and the viscosity of the blood.\\
 
-The cardiac output $ CO $ states the blood volume, which is pumped by the heart per time unit. The calculation of the $ CO $ as follows.\\
+The cardiac output $ CO $ states the blood volume, which is pumped by the heart per time unit. The calculation of the $ CO $ as follows.
+\begin{flalign}
+	CO=HF\times stroke volume
+\end{flalign}
 
-$ CO=HF\times stroke volume $\\
-
-The total periphery resistance is the flow resistance of the systemic circulation and results from the sum of all vessel resistances. $ TPR $ depends on $ MAP $ , $ CVP $ and $ CO $.\\
-
-$ TPR=\frac{MAP-CVP}{CO} $
+The total periphery resistance is the flow resistance of the systemic circulation and results from the sum of all vessel resistances. $ TPR $ depends on $ MAP $ , $ CVP $ and $ CO $.
+\begin{flalign}
+	TPR=\frac{MAP-CVP}{CO}
+\end{flalign}
 
 \section{Physical Base}
 To consider the hemodynamics, it is possible to draw conclusions by analogy of physical laws. Especially of Ohm's law $ R=\frac{U}{I} $ or rather $ I=\frac{U}{R} $.\\
 
 A special case of Ohm's law constitutes Hagen-Poiseuille's law in the field of fluid dynamic and rheology. Hagen-Poiseuille's law describes the laminar flow of an homogeneous Newtonian fluid through a rigid pipe depending on characteristics of the fluid and of the pipe.
 
-Blood is an inhomogeneous suspension of liquid and corpuscular components, whose viscosity $ \eta $ depends on more factors than the temperature, and is consequently no Newtonian fluid. Nevertheless it is possible to draw conclusions by analogy out of Hagen-Poiseuille's law for the computation of the hemodynamics.\\
+Blood is an inhomogeneous suspension of liquid and corpuscular components, whose viscosity $ \eta $ depends on more factors than the temperature, and is consequently no Newtonian fluid. Nevertheless it is possible to draw conclusions by analogy out of Hagen-Poiseuille's law for the computation of the hemodynamics.
+\begin{flalign}
+	\frac{V}{t}=\frac{r^{4}\times\pi\times\Delta P}{8\times\eta\times I}
+\end{flalign}
 
-$ \frac{V}{t}=\frac{r^{4}\times\pi\times\Delta P}{8\times\eta\times I} $\\
-
-Here is the volume flow equivalent to the electrical current $ I $ and the pressure difference $ \Delta $P to the electric Voltage $ U $. Thus, the calculation of the Resistance as follows.\\
-
-$ R=\frac{8\times I\times\eta}{r^{4}} $\\
+Here is the volume flow equivalent to the electrical current $ I $ and the pressure difference $ \Delta $P to the electric Voltage $ U $. Thus, the calculation of the Resistance as follows.
+\begin{flalign}
+	R=\frac{8\times I\times\eta}{r^{4}}
+\end{flalign}
 
 The logical conclusion is, that the volume flow increases 16 times and the resistance decreases 16 times for double radius $ r $.\\
 
@@ -39,16 +43,19 @@ In the blood is the oxygen tied to a large extent by hemoglobin. The oxygen satu
 	\label{fig:FigureLABEL}  %<--give the figure a label, so you can reference!
 \end{figure}
 
-The oxygen content of the blood depends on both, the oxygen saturation and the oxygen partial pressure. $ cO_{2} $ is calculated by the sum of the hemoglobin bounded and the physical dissolved oxygen.\\
+The oxygen content of the blood depends on both, the oxygen saturation and the oxygen partial pressure. $ cO_{2} $ is calculated by the sum of the hemoglobin bounded and the physical dissolved oxygen.
+\begin{flalign}
+	cO_{2}=Hb\times 1,34\frac{ml}{g} + pO_{2}\times 0,003\frac{ml\times dl}{mmHg}
+\end{flalign}
 
-$ cO_{2}=Hb\times 1,34\frac{ml}{g} + pO_{2}\times 0,003\frac{ml\times dl}{mmHg} $\\
+The available oxygen is calculates by the oxygen content of the blood and the cardiac output.
+\begin{flalign}
+	DO_{2}=cO_{2}\times CO
+\end{flalign}
 
-The available oxygen is calculates by the oxygen content of the blood and the cardiac output.\\
-
-$ DO_{2}=cO_{2}\times CO $\\
-
-The consumption of oxygen is calculated by the difference between the available oxygen in the arterial and the venous blood and the cardiac output.\\
-
-$ VO_{2}=(c_{a}O_{2}-c_{v}O_{2})\times CO $\\
+The consumption of oxygen is calculated by the difference between the available oxygen in the arterial and the venous blood and the cardiac output.
+\begin{flalign}
+	VO_{2}=(c_{a}O_{2}-c_{v}O_{2})\times CO
+\end{flalign}
 
 Therefore one can draw a conclusion from the available and the consumption of oxygen to the cardiac output.
