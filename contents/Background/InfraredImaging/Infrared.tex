@@ -32,27 +32,46 @@ Infrared radiation is also known as thermal radiation because of the relationshi
 
 \subsection{Measuring thermal energy}
 
-The theory of the black body is important to understand the absorption and emission of light relative to temperature, because the theory of the black body is used to describe the laws of infrared radiation and its relationship to temperature. The black body is an ideal perfect emitter of infrared radiation because it absorbs all electromagnetic radiation permitted to it, and it emits the same amount of radiation as it absorbs, the absorption and emission sums up to be zero. 
-Spectral emissive power, also denoted $E_\lambda$ is the energy emitted by a surface in relation to time and range of wavelength. Figure \ref{fig:Spectral} shows an graphical illustration of spectral emissive power of the black body for specific wavelengths when the temperature changes. Radiation at different frequencies according to temperature are also shown in the figure.\cite{ignacio2017} 
+The theory of the black body is important to understand the absorption and emission of light relative to temperature, because the theory of the black body is used to describe the laws of infrared radiation and its relationship to temperature. The black body is an ideal perfect emitter of infrared radiation because it absorbs all electromagnetic radiation permitted to it, and it emits the same amount of radiation as it absorbs, the absorption and emission are both equal to one. 
+Spectral emissive power, also denoted $E_\lambda$ is the energy emitted by a surface in relation to time and range of wavelength. Figure \ref{fig:Spectral} shows an graphical illustration of spectral emissive power of the black body for specific wavelengths when the temperature changes. \cite{ignacio2017} 
 
 \begin{figure}[H]
 	\centering	\includegraphics[width=0.65\textwidth]{figures/Spectral_power_emissive}
-	\caption{Spectral power emissive\cite{ignacio2017}}
+	\caption{Spectral power emissive as a function of wavelength for different temperatures \cite{ignacio2017}}
 	\label{fig:Spectral}
 \end{figure} \vspace{-.3cm}
 
-The knowledge of this principle helps in the understanding of how infrared radiation behaves, and how temperature affects the frequency of the signal. 
-The radiation from the human body which has a temperature at 37$^{\circ}$C emits the maximum energy of $9.3 \mu$m, which means that most of the radiation is in the far infrared spectrum.
+The knowledge of this principle helps in the understanding of how infrared radiation behaves, and how temperature affects the wavelength of the signal. 
+The radiation from the human body which has a temperature at 37$^{\circ}$C emits the maximum energy of $9.3 \mu$m, which means that most of the radiation is in the far infrared spectrum.\cite{ignacio2017}
 
-- Maybe describe wien's displacement law... (wavelength of the peak of the blackbody radiation curve decreases as the body temperature increases)
+Physical laws including Wien's displacement law and Stefan-Boltzmann's law are important for explaining how the infrared radiation behaves at different temperatures. \cite{ignacio2017} 
+ 
+Wien's displacement law tells that the wavelength of the peak of the black body radiation curve decreases as the body temperature increases. This law can be used to describe different wavelengths according to the temperature of the black body which emits the radiation. Wien's law has the following equation: 
 
-- RIO (region of interest)
-The lens are important to capture the image you want (dunno if this is relevant to mention?)
+\begin{flalign}
+	\lambda_{max} = \frac{a}{T}
+	\label{eq:wien}
+\end{flalign}
 
+In Wiens displacement law 'a' denotes the Wien's displacement constant, this constant has the value $2.897*10^{-3} m K$. 'T' denotes the absolute temperature in kelvin. '$\lambda_{max}$' denotes the wavelength of emission peak with unit in meters.\cite{ignacio2017} 
 
+Stefan-Boltzmann's law tells that small changes in temperature will lead to big changes in emissive power. This is seen in Stefan-Boltzmann's equation because it states that the total emissive power is proportional to the fourth power of the absolute  temperature. \cite{ignacio2017}
 
-Measuring thermal radiation uses the knowledge that electromagnetic radiation is proportional to the internal energy. With a lens, the radiation that is emitted is focused onto a detector element in the camera that generates an electric output proportional to the radiation. The electric output is undergoing amplification and further signal processing.This allows the final output signal to be viewed as a temperature for the object. \cite{optris2009}
-The black body is used for calibrating thermometers...
+\begin{flalign}
+	E = {\varepsilon}*{\sigma}*{T^4}
+	\label{eq:stefan}
+\end{flalign}
+
+In Stefan-Boltzmann's equation 'E' denotes the total emissive power with unit $W/m^{2}$. '$\sigma$' denotes the Stefan-Boltzmann's constant, this has a value of $5.67*10^{-8} W/m^{-2} K^{-4}$ and 'T' is the temperature in kelvin. '$\varepsilon$' denotes the emissivity and is normally not a part of the Stefan-Boltzmann's law, but part of the modified Stefan-Boltzmann's equation, because it is used for calculation of temperature in most thermal cameras. Emissivity is different for all materials. Skin have an emissivity between 0.95 to 9.99, why these values typically are used when assessing the temperature of the skin of the human body with thermography.
+This law is important when considering infrared thermography because the sensitivity when calculating the temperature from the emissive power is big. \cite{ignacio2017}
+
+\textbf{Region of interest}
+
+Region of interest (RIO) is an important consideration when doing measurements with thermal imaging. One of the reasons why this is an important aspect is because it is the RIO that lays the foundation of the data that goes into the statistical analysis. A minimum of 25 pixels is recommended for the RIO to reduce error in the data. To get the best measurement the RIO should be filling most of the image to get the best thermal data and better resolution in the area you want to measure. \cite{ignacio2017}   
+
+\textbf{Thermal cameras}
+
+The radiation emitted from an object is focusing the RIO onto a detector via a lens in the thermal camera. The radiation emitted to the detector generates an electric output proportional to the radiation. The output is then undergoing amplification before further signal processing that digitalizes the signal into pixels. This allows the final output signal to be viewed as a temperature for the object on an monitor, this is also illustrated on figure \ref{fig:em_spectrum}. \cite{optris2009}
 
 \begin{figure}[H]                                         
 	\includegraphics[width=.55\textwidth]{figures/IR_cam}  
@@ -60,6 +79,7 @@ The black body is used for calibrating thermometers...
 	\label{fig:em_spectrum}  
 \end{figure} 
 
+The infrared radiation is made into an electrical signal in the camera, this data can be used in calculating the temperature for an object by knowing certain variables and putting these into Stefan Boltzmann's equation \ref{eq:stefan}. The emissive power denoted E, is the radiation that the detector in the camera is getting. The variables $\sigma$ are known and $\varepsilon$ is specified for the object that is being measured, eg. the human skin with emissivity between 0.95 to 0.99. The temperature are then the only variable to calculate and this is done for each pixel in the image to make up the complete thermal image of the object. Each pixel will be representing one thermal data. \cite{ignacio2017}
 
 
 
