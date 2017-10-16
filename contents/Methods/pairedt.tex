@@ -15,23 +15,43 @@ Within this study the arms of the subjects will be cuffed. To avoid any carry-ov
 \end{figure}
 
 The paired t-test is used to check the difference of means of two conditional samples. This test is usually used to compare "before treatment" and "after treatment".
-It is requisite that the sample size of the of both samples is identical.
-Following some useful formulas:
+The tested hypotheses are (where $\delta=\mu_{1}-\mu{2}$)\cite{dodge2008}:
 \begin{itemize}
+	\item $ H_{0}: \delta=0 $
+	no difference between uncuffed and cuffed arm
+	\item $ H_{1}: \delta\neq0 $
+	a difference between uncuffed and cuffed arm
+\end{itemize}
+In this case, there is a relation between the microcirculatory and the macrocirculatory system shown, if the null hypothesis is rejected.
+
+It is requisite that the sample size of the of both samples is identical.
+
+Following some useful formulas\cite{dodge2008}:
+\begin{itemize}
+	\item difference within the subjects
+	\begin{flalign}
+		d_{i}=x_{i2}-x_{i1}
+	\end{flalign}
+	with $ i=1,2,...,n $
+	\item mean of the difference
+	\begin{flalign}
+		\bar{d}=\frac{1}{n}\Sigma d_{i}
+	\end{flalign}
+	with $ i=1,2,...,n $
+	\item standard deviation
+	\begin{flalign}
+		s_{d}=\sqrt{\frac{\Sigma (d_{i}-\bar{d})^2}{n-1}}
+	\end{flalign}
 	\item test variable
 	\begin{flalign}
-		t=\frac{\bar{X_{D}}-\mu_{0}}{\frac{s_{D}}{\sqrt{n}}}
+		T=\frac{\bar{d}}{\frac{1}{\sqrt{n}}s_{d}}
 	\end{flalign}
-	\item mean of difference of the paired means
+	\item degrees of freedom
 	\begin{flalign}
-		\bar{X_{D}}=\frac{1}{n}\times \Sigma (X_{1}-X_{2})
+		n-1
 	\end{flalign}
-	\item standard derivation of the difference of the paired means
+	\item decision rule for rejecting the null hypothesis
 	\begin{flalign}
-		s_{D}=\sqrt{\frac{\Sigma((X_{1}-X_{2})-\bar{X_{D}})^{2}}{n-1}}
-	\end{flalign}
-	\item degree of freedom
-	\begin{flalign}
-		2\times n-2
+		|T|>t_{n-1,\frac{\alpha}{2}}
 	\end{flalign}
 \end{itemize}
