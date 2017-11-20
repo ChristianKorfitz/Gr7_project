@@ -19,16 +19,27 @@ The wavelet computes both the scale(s) and position(p) for the wavelet transform
 
 The signal f(t) is convoluted with the wavelet $\Psi$ to get the wavelet coefficients for s and p. 
 
-This is done by computing the wavelet of the signal which then is compared to the wavelet for a section at the beginning of the signal. Then C in \ref{eq:wave} is calculated for the section of the signal. The wavelet is shifted to the right and repeated until the entire signal is covered. The wavelet is then scaled and C is computed for the entire signal again for all scales.
+This is done by computing the wavelet of the signal which then is compared to the wavelet for a section at the beginning of the signal. Then C in \ref{eq:wave} is calculated for the section of the signal. The wavelet is shifted to the right and repeated until the entire signal is covered. The wavelet is then scaled and C is computed for the entire signal again for all scales. \cite{Uvo1995}
+
+Different wavelets can be used to compoute wavelet transformation. The Morlet is default with Matlab, why this one is being used. 
+
+The general form of the continuous wavelet transform is stated in \ref{eq:cwt}:
 
 \begin{flalign}
 W(t,s) \equiv \int_{-\infty}^{\infty} \frac{1}{s^n} \psi *(\frac{\tau-t}{\s})x(\tau)d\tau
 \label{eq:cwt}
 \end{flalign}
 
-\begin{flalign}
-	W(t,s) = \frac{1}{2\pi} \int_{-\infty}^{\infty} \Psi*(s\omega)X(\omega)e^{i\omega t} d\omega
-	\label{eq:cwt2}
-\end{flalign}
+Where $\psi *(\frac{\tau-t}{\s})$ is the wavelet and $x(\tau)$ is the signal.
+
+%\begin{flalign}
+%W(t,s) \equiv \int_{-\infty}^{\infty} \frac{1}{s^n} \psi *(\frac{\tau-t}{\s})x(\tau)d\tau
+%\label{eq:cwt}
+%\end{flalign}
+
+%\begin{flalign}
+%	W(t,s) = \frac{1}{2\pi} \int_{-\infty}^{\infty} \Psi*(s\omega)X(\omega)e^{i\omega t} d\omega
+%	\label{eq:cwt2}
+%\end{flalign}
 
 The signal which also is a function is put into the wavelet transformation \ref{eq:cwt}.
