@@ -10,12 +10,14 @@ A continuous wavelet transform out of the raw data shows a magnitude scalogram w
 Additionally there is also a drift occurring within each interval between two jumps, which hampers the correct data analysis. To reduce the drift component and the jumps in the signals, the two following correction methods have been implemented.
 
 \textbf{Method 1: Regression of first interval}
+
 The first implemented method is based on the assumption that the drift is equal in each interval. It is also assumed that the camera has been calibrated just before the recording, so the first interval can be used as a reference to calculate the drift component. Therefore a linear regression for the first interval has been made. With the resultant slope $m$ follows the calculation of the drift difference $d$ within the first interval. Due to the assumption, that the drift difference is equal, the slope of the drift of each interval depends on the length of the interval. The slopes have been calculated with the equation $m=\frac{d}{length(interval)}$.
 To compensate the drift, a straight with the inverse slope and the starting point in the first data point of the interval has been calculated. The middle points between the original data and the new calculated straight build the correction of the data signal.
 This correction worked within the signal just in several parts and had a lot of weak points where the jumps have been strengthened. Due to the outcome of this method the assumption, that the drift is equal in each interval has been discarded. 
 
 
 \textbf{Method 2: Regression of each interval}
+
 The second implemented method is due to the failure of the first method based on the assumption that the drift is not equal in each interval. Out of the recorded data the exact drift is indeterminable. Hence a method which tries to fit the separate intervals together without the necessity of the awareness of the real drift component and avoids the suppression of the basic shape of the signal has been chosen.
 Therefore firstly the linear regressions for all intervals and the corresponding residuals are calculated.
 The idea is to move the end point of a regression line and the start point of the next regression line together. Thus the middle points between end and following start point are calculated. The alignment of the regression lines is changed, so that the start and end points of all the new created orientation straights fit the middle points, except the first and the last orientation straight. Both fit just one middle point. For the start of the first orientation straight is the start point of the regression line of the first interval and for the end point of the last orientation straight is the end point of the regression line of the last interval used.
