@@ -12,10 +12,10 @@ Additionally there is also a drift occurring within each interval between two ju
 \textbf{Method 1: Regression of first interval}
 
 The first implemented method is based on the assumption that the drift is equal in each interval. It is also assumed that the thermal camera has been calibrated just before the recording, so the first interval can be used as a reference to calculate the drift component. Therefore a linear regression for the first interval has been made. With the resultant slope $m$ follows the calculation of the drift difference $d$ within the first interval. Due to the assumption, that the drift difference is equal, the slope of the drift of each interval depends on the length of the interval. The slopes have been calculated with equation \ref{eq:slope}.
-\begin{flaglign}
+\begin{flalign}
 	m=\frac{d}{length(interval)}
 	\label{eq:slope}
-\end{flaglign}
+\end{flalign}
 To compensate the drift, a straight with the inverse slope and the starting point in the first data point of the interval has been calculated. The middle points between the original data and the new calculated straight build the correction of the data signal.
 This correction worked within the signal just in several parts and had a lot of weak points where the jumps have been strengthened. Due to the outcome of this method the assumption, that the drift is equal in each interval has been discarded. 
 \fxnote{figure missing}
