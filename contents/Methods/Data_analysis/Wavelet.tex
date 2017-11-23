@@ -34,7 +34,8 @@ Where $\psi *(\frac{\tau-t}{\s})$ is the wavelet and $x(\tau)$ is the signal.\ci
 
 The signal or function is put into the continuous wavelet transformation equation \ref{eq:cwt}.
 The wavelet transform will give a scolargram as an output.
-The frequencies are shown along the y-axis if the sampling frequency is specified, else it will show the period. Along the x-axis is the time vector. The scolargram shows the magnitude of the signal as to show how the frequency in the signal is represented. A scale to see the magnitude is also implied. An example of an scolargram is given in \figref{fig:scolargram}
+In Matlab the function cwt can be used to compute the continuous wavelet transformation by inserting the signal and the sampling frequency. This will give a scolargram as shown in \figref{scolargram}. \cite{mathworks2017} 
+The frequencies in Hz are shown along the y-axis if the sampling frequency is specified, else it will show the normalized frequency in cycles pr. sample. Along the x-axis is the time vector. The scolargram show the magnitude of the signal to show how the frequency in the signal is distributed. A scale to see the size of the magnitude is also implied. An example of a scolargram is given in \figref{fig:scolargram}
 
 \begin{figure}[H]
 	\centering	\includegraphics[width=0.65\textwidth]{figures/scolargram}
@@ -42,7 +43,6 @@ The frequencies are shown along the y-axis if the sampling frequency is specifie
 	\label{fig:scolargram}
 \end{figure} \vspace{-.3cm}
 
-In Matlab the function cwt can be used to compute the continuous wavelet transformation by inserting the signal and the sampling frequency. This will give a scolargram as shown in \figref{scolargram}. \cite{mathworks2017}
 %\begin{flalign}
 %W(t,s) \equiv \int_{-\infty}^{\infty} \frac{1}{s^n} \psi *(\frac{\tau-t}{\s})x(\tau)d\tau
 %\label{eq:cwt}
