@@ -21,7 +21,7 @@ With the improved contrast, 28 ROI from the hand were chosen on the first image 
 
 The regions are constant for the whole image series for each measurement, assuming that the subject was sitting still during the whole measurement. The regions also account for both the uncuffed and cuffed conditions for each subject, assuming that the position of the hand was at the same position in both conditions. 
 Iterating over the image series saving ROI into a cell array with data points for each ROI, a vector for the each of the 28 regions was made to give the pixel intensity variations over the whole measurement. 
-An example of the pixel intensities for one subject is shown on image \ref{fig:Intensities}
+An example of the pixel intensities for subject 1 is shown on image \ref{fig:Intensities}
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{figures/Intensities}  %<--but is not needed.
@@ -29,4 +29,4 @@ An example of the pixel intensities for one subject is shown on image \ref{fig:I
 	\label{fig:Intensities}  %<--give the figure a label, so you can reference!
 \end{figure}
 
-It is noticed that there are some jumps at specific times in the pixel intensity for all ROI, this is due to the drift auto correction from the camera shutter \fixme{a citation of reference to another place should be here for documentation}. This problem is dealt with in the next section. %something like that...? dunno if it is to much to take the intensity plot with here? but i was thinking it to be to make a smooth transition to the drift correction... 
+%It is noticed that there are some jumps at specific times in the pixel intensity for all ROI, this is due to the drift auto correction from the camera shutter \fixme{a citation of reference to another place should be here for documentation}. This problem is dealt with in the next section. %something like that...? dunno if it is to much to take the intensity plot with here? but i was thinking it to be to make a smooth transition to the drift correction... 
