@@ -13,7 +13,7 @@
 
 %||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 %|||||||      
-           Example Inputs                  ||||||||
+%           Example Inputs                  ||||||||
 %||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 %|||||||                                                 ||||||||
 %			 \input{chapters/aFigureSample.tex}			 %|||||||
@@ -31,7 +31,7 @@
 \setlength\cftafterloftitleskip{6pt}
 \setlength\cftafterlottitleskip{6pt}
 %\selectlanguage{danish}
-\title{Ingen ved det}
+%\title{Ingen ved det}
 
 %%% Frontmatter Settings %%%
 \pagestyle{empty} %disable headers and footers
@@ -42,15 +42,15 @@
 
 %%% Introductory Formalities %%%
 %\includepdf[pages={1}]{formalities/frontpage.pdf}
-%\input{formalities/frontpage.tex}
+\input{formalities/frontpage.tex}
 \pagestyle{fancy}
 %\include{formalities/kolofon}
-%\input{formalities/titleSheet.tex}
+\input{formalities/titleSheet.tex}
 %%% Preface %%%
 %\cleardoublepage
-%\input{contents/xFormaliteter/abstract.tex}
+\input{contents/xFormaliteter/abstract.tex}
 \clearpage
-%\input{contents/xFormaliteter/forord.tex}
+\input{contents/xFormaliteter/forord.tex}
 
 \pdfbookmark[0]{Table of Contents}{label: tableOfCentents}
 \tableofcontents
