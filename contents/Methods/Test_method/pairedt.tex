@@ -1,19 +1,5 @@
 \chapter{paired t-test}
 
-The used method of the study design is called in series design. This enable to compare the situation before and after treatment within each subject.
-\begin{figure}[H]
-	\includegraphics[width=0.4\textwidth]{figures/inseries1}
-	\caption{The procedure of studies with in series design.}
-	\label{fig:FigureLABEL}
-\end{figure}
-
-Within this study the arms of the subjects will be cuffed. To avoid any carry-over effect, the measurements on the normal arm will be done first. That means beginning with the control and then the "treatment".
-\begin{figure}[H]
-	\includegraphics[width=0.4\textwidth]{figures/inseries2}
-	\caption{The procedure of this study with in series design.}
-	\label{fig:FigureLABEL}
-\end{figure}
-
 The paired t-test is used to check the difference of means of two conditional samples. This test is usually used to compare "before treatment" and "after treatment".
 The tested hypotheses are (where $\delta=\mu_{1}-\mu{2}$)\cite{dodge2008}:
 \begin{itemize}
@@ -28,16 +14,14 @@ It is requisite that the sample size of the of both samples is identical.
 
 Following some useful formulas\cite{dodge2008}:
 \begin{itemize}
-	\item difference within the subjects
+	\item difference within the subjects, with $ i=1,2,...,n $
 	\begin{flalign}
 		d_{i}=x_{i2}-x_{i1}
 	\end{flalign}
-	with $ i=1,2,...,n $
-	\item mean of the difference
+	\item mean of the difference, with $ i=1,2,...,n $
 	\begin{flalign}
 		\bar{d}=\frac{1}{n}\Sigma d_{i}
 	\end{flalign}
-	with $ i=1,2,...,n $
 	\item standard deviation
 	\begin{flalign}
 		s_{d}=\sqrt{\frac{\Sigma (d_{i}-\bar{d})^2}{n-1}}
@@ -55,3 +39,5 @@ Following some useful formulas\cite{dodge2008}:
 		|T|>t_{n-1,\frac{\alpha}{2}}
 	\end{flalign}
 \end{itemize}
+
+\fxnote{should be completed when we know if it is right what we are doing}
