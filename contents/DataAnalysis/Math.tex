@@ -6,8 +6,16 @@ After plotting the radiant intensity for each region of interest it is apparent 
 	\caption{The original data of region 15 in the uncuffed recording of subject 1 including 20 jumps.}
 	\label{fig:raw15}
 \end{figure}
-A continuous wavelet transform out of the raw data shows a magnitude scalogram with high magnitude peaks exactly at the same time points where the jumps are occurring. Due to this falsifying of the magnitude, the results of the data analysis are also falsified.
-Additionally there is also a drift occurring within each interval between two jumps, which hampers the correct data analysis. To reduce the drift component and the jumps in the signals, the two following correction methods have been compiled, whereby the second one has been implemented.
+A continuous wavelet transform show the time frequency analysis content of the data for each region. Frequencies of higher magnitude will show up with brighter colors, which can also be seen on the magnitude colorbar for comparison of the magnitude in values. 
+The freqency of the scalograms vary from 2.7370 Hz to 0.0031 Hz. This means according to the litterature that bands of cardiac, repiratory, endothelial, myogenic and neurogenic is represented in the wavelet frequency span for the time frequency analysis. \cite{sagaidachnyi2014}
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{figures/scalogram_uncorr}
+	\caption{Scalogram from the original data of region 24 in the cuffed recording of subject 1, where high spikes magnitudes can be seen enduced by the jumps.}
+	\label{fig:scalogram_uncorr}
+\end{figure}
+From the raw data magnitude of the scalogram show high magnitude peaks exactly at the same time points where the jumps are occurring, which can be seen in figure \ref{fig:scalogram_uncorr}. Due to this falsifying of the magnitude, the results of the data analysis are also falsified.
+
+Additionally there is also a drift occurring within each interval between two jumps, which hampers the correct data analysis, this can also be seen in in figure \ref{scalogram_uncorr} as the frequency band with higher magnitude. To reduce the drift component and the jumps in the signals, the two following correction methods have been compiled, whereby the second one has been implemented.
 
 \textbf{Method 1: Regression of first interval}
 
@@ -36,7 +44,13 @@ As shown in figure \ref{fig:reg15} the new orientation straight fits the regress
 	\caption{Orientation line based on the data of the uncuffed recording of subject 1 in region 15 shown in red. Corrected signal of the same data in yellow.}
 	\label{fig:corr15}
 \end{figure}
-However, this method still has weak points. The in figures \ref{fig:raw15} - \ref{fig:corr15} shown region of interest is located in the center of the thermal image. Regions which are located in the outer area of the thermal image show a few jumps after the correction which are bigger than before (\ref{fig:corr23}). These sporadic extended jumps are due to the fact that the thermal image is more unstable in the outer areas than in the center, thus the pixel drift is increasing with increasing distance of the center.
+After the drift correction is added to the signal, the energy has been reduced at this areas induced from the jump which can be seen in figure \ref{fig:scalogram_corr}. 
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{figures/scalogram_uncorr}
+	\caption{Scalogram from the original data of region 24 in the cuffed recording of subject 1, where high spikes magnitudes can be seen enduced by the jumps.}
+	\label{fig:scalogram_corr}
+\end{figure} 
+However, this method still has weak points. The in figures \ref{fig:raw15} - \ref{fig:corr15} shown region of interest is located in the center of the thermal image. Regions which are located in the outer area of the thermal image show a few jumps after the correction which are bigger than before (\ref{fig:corr23}). These sporadic extended jumps are due to the fact that the thermal image is more unstable in the outer areas than in the center, thus the pixel drift is increasing with increasing distance of the center. \fxnote{maybe mention that the regression is linear and will not fit all the data thereby}
 \begin{figure}[H]
 	\includegraphics[width=0.9\textwidth]{figures/corr23pfeile}
 	\caption{Corrected data of the uncuffed recording of subject 1 in region 23 shown in yellow. Red arrows show the jumps in this signal.}
