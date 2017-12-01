@@ -3,10 +3,10 @@
 The paired t-test is used to check the difference of means of two conditional samples. This test is usually used to compare "before treatment" and "after treatment".
 The tested hypotheses are (where $\delta=\mu_{1}-\mu{2}$)\cite{dodge2008}:
 \begin{itemize}
-	\item $ H_{0}: \delta=0 $
-	no difference between uncuffed and cuffed arm
-	\item $ H_{1}: \delta\neq0 $
-	a difference between uncuffed and cuffed arm
+	\item $ H_{0}: \delta=0 $ :
+	No difference between uncuffed and cuffed arm is present
+	\item $ H_{1}: \delta\neq0 $ :
+	Difference between uncuffed and cuffed arm is present
 \end{itemize}
 In this case, there is a relation between the microcirculatory and the macrocirculatory system shown, if the null hypothesis is rejected.
 
@@ -14,30 +14,34 @@ It is requisite that the sample size of the of both samples is identical.
 
 Following some useful formulas\cite{dodge2008}:
 \begin{itemize}
-	\item difference within the subjects, with $ i=1,2,...,n $
+	\item Difference within the subjects, with $ i=1,2,...,n $
 	\begin{flalign}
 		d_{i}=x_{i2}-x_{i1}
+		\label{eq:di}
 	\end{flalign}
-	\item mean of the difference, with $ i=1,2,...,n $
+	\item Mean of the difference, with $ i=1,2,...,n $
 	\begin{flalign}
 		\bar{d}=\frac{1}{n}\Sigma d_{i}
 	\end{flalign}
-	\item standard deviation
+	\item Standard deviation
 	\begin{flalign}
 		s_{d}=\sqrt{\frac{\Sigma (d_{i}-\bar{d})^2}{n-1}}
 	\end{flalign}
-	\item test variable
+	\item Test variable
 	\begin{flalign}
 		T=\frac{\bar{d}}{\frac{1}{\sqrt{n}}s_{d}}
 	\end{flalign}
-	\item degrees of freedom
+	\item Degrees of freedom
 	\begin{flalign}
 		n-1
 	\end{flalign}
-	\item decision rule for rejecting the null hypothesis
+	\item Decision rule for rejecting the null hypothesis
 	\begin{flalign}
 		|T|>t_{n-1,\frac{\alpha}{2}}
+		\label{eq:T}
 	\end{flalign}
 \end{itemize}
 
-\fxnote{should be completed when we know if it is right what we are doing}
+The formulas \ref{eq:di} throughout \ref{eq:T} are used to calculate the required decision rule, for either rejecting or keeping the null hypothesis on behalf of the data.  
+
+%\fxnote{should be completed when we know if it is right what we are doing}
