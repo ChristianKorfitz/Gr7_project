@@ -10,7 +10,7 @@ A continuous wavelet transform show the time frequency analysis content of the d
 The freqency of the scalograms vary from 2.7370 Hz to 0.0031 Hz. This means according to the litterature that bands of cardiac, repiratory, endothelial, myogenic and neurogenic is represented in the wavelet frequency span for the time frequency analysis. \cite{sagaidachnyi2014}
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{figures/scalogram_uncorr}
-	\caption{Scalogram from the original data of region 24 in the cuffed recording of subject 1, where high spike magnitudes can be seen induced by the jumps.}
+	\caption{Scalogram from the original data of region 15 in the uncuffed recording of subject 1, where high spike magnitudes can be seen induced by the jumps.}
 	\label{fig:scalogram_uncorr}
 \end{figure}
 From the raw data magnitude of the scalogram show high magnitude peaks exactly at the same time points where the jumps are occurring, which can be seen in figure \ref{fig:scalogram_uncorr}. Due to this falsifying of the magnitude, the results of the data analysis are also falsified.
@@ -47,7 +47,7 @@ As shown in figure \ref{fig:reg15} the new orientation straight fits the regress
 After the drift correction is added to the signal, the energy has been reduced at this areas induced from the jump which can be seen in figure \ref{fig:scalogram_corr}. 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{figures/scalogram_corr}
-	\caption{Scalogram from the corrected data of region 24 in the cuffed recording of subject 1, where a dampening of the high spike and drift magnitudes induced by the jumps has been achieved.}
+	\caption{Scalogram from the corrected data of region 15 in the uncuffed recording of subject 1, where a dampening of the high spike and drift magnitudes induced by the jumps has been achieved.}
 	\label{fig:scalogram_corr}
 \end{figure} 
 However, this method still has weak points. The in figures \ref{fig:raw15} - \ref{fig:corr15} shown region of interest is located in the center of the thermal image. Regions which are located in the outer area of the thermal image show a few jumps after the correction which are bigger than before (\ref{fig:corr23}). These sporadic extended jumps are due to the fact that the thermal image is more unstable in the outer areas than in the center, thus the pixel drift is increasing with increasing distance of the center. \fxnote{maybe mention that the regression is linear and will not fit all the data thereby}
