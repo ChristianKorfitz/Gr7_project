@@ -1,8 +1,11 @@
 \section{Continous wavelet transformation}
 
-The wavelet transform is used to see the frequency components of the signal in the time frequency domain. Wavelet transformation is practical when looking for signals of lower frequencies compared to the normal fourier analysis, because of the bigger resolution in the wavelet analysis. \cite{geyer2004} Another drawback of the fourier transform is the loss of time information. 
+Analysis of the collected data from the thermal camera will be done in the time frequency domain. For this the wavelet transformation will be used to look for specific frequency content in the data. 
+Wavelet transformation is practical when looking for signals of lower frequencies compared to the normal fourier analysis, because of the bigger resolution in the wavelet analysis.\cite{geyer2004} Another drawback of the fourier transform is the loss of time information, which is preserved with the wavelet transformation. 
 
-The wavelet transformation is using a variable sized region windowing technique. Long time intervals are used where low frequency information is computed and short time intervals are used where high frequency information is computed. This is represented in \figref{fig:sigToWave}.
+Both a discrete and the continuous wavelet transforms exists and can be used, but the continuous has better resolution, why this is being used for interpreting the data.\cite{greyer2004} 
+
+The continuous wavelet transformation is using a variable sized region windowing technique. Long time intervals are used where low frequency information is computed and short time intervals are used where high frequency information is computed. This is represented in \figref{fig:sigToWave}.
 
 \begin{figure}[H]
 	\centering	\includegraphics[width=0.65\textwidth]{figures/signalToWavelet}
@@ -10,14 +13,14 @@ The wavelet transformation is using a variable sized region windowing technique.
 	\label{fig:sigToWave}
 \end{figure} \vspace{-.3cm}
 
-The wavelet computes both the scale $(s)$ and position $(p)$ for the wavelet transform. 
+The wavelet transform computes both the scale $(s)$ and position $(p)$ for the wavelet transform. 
 
 \begin{flalign}
 	C(s,p)=\int_{-\infty}^{\infty}f(t)\Psi (s,p) dt
 	\label{eq:wave}
 \end{flalign}
 
-The signal f(t) is convoluted with the wavelet $\Psi$ to get the wavelet coefficients for s and p. 
+To achieve the continuous wavelet transformation, equation \ref{eq:wave}, the signal f(t) is convoluted with the wavelet $\Psi$ to get the wavelet coefficients for s and p. 
 
 This is done by computing the wavelet of the signal which then is compared to the wavelet for a section at the beginning of the signal. Then $C$ in equation \ref{eq:wave} is calculated for the section of the signal. The wavelet is shifted to the right and repeated until the entire signal is covered. Then the wavelet is scaled and $C$ is computed for the entire signal again for all scales. \cite{Uvo1995}
 
