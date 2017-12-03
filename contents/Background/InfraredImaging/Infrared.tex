@@ -2,8 +2,9 @@
 
 Thermal imaging is an technique that utilizes infrared radiation emitted from nearly any objects. 
 The existence of infrared radiation was first discovered in 1800 by Sir Frederick William Herschel. 
-His experiments lead to the knowledge that there were a light spectrum beyond the visual spectrum humans are able to perceive.\cite{ignacio2017,optris2009}
+His experiments lead to the knowledge that there were a light spectrum beyond the visual spectrum humans are able to perceive. Any object above absolute zero emits energy-electromagnetic radiation depending on its temperature.\cite{ignacio2017,optris2009}
 
+Infrared radiation is also known as thermal radiation because of the relationship between temperature and infrared radiation. Temperature of the human body permits radiation in the infrared spectrum, but objects of much higher temperature are capable of emitting radiation in the visible and UV spectrum. This has to do with the difference between object and environmental temperature. If the temperature of these are relatively close to each other, the radiation emitted will be within infrared wavelengths. Infrared radiation has a wavelength from 769 nm to 1 mm. Objects emit more radiation in some region regions compared to others. Because of this is the infrared spectrum classified in the three regions, near, middle and far infrared. Near is between 769 nm and 2.5 $\mu$m, middle 2.5 $\mu$m to 50 $\mu$m and far 50 $\mu$m to 1 mm. The human body emits most radiation in the far infrared part, and most thermal cameras are build with this in mind. Near and middle cameras are used to measure gases.\cite{ignacio2017}
 Thermal imaging is commonly used to calculate surface temperatures. Two important concepts, heat and temperature emerge in the understanding of this. Temperature is a measure for the internal energy within an object and can be defined as the average kinetic energy of the object.
 Heat is the energy that passes from a warm object to a colder object. Warm objects will decrease in internal energy and cold objects will increase due to the temperature difference and therefore the heat transfer. In the human body, a constant temperature is keep, due to several factors and therefore the temperature will not decrease even though a heat transfer to the surrounding environment occurs. The environmental temperature do have an impact on how large the heat transfer gradient is. If a body is in a cold environment, the emitted heat will be greater than the absorbed. In the same way, if the environment is much warmer than 37$^{\circ}$C, a greater absorption than emission will occur and the body will increase in temperature.\cite{ignacio2017} 
 
@@ -58,7 +59,12 @@ The radiation emitted from an object is focusing the RIO onto an array of detect
 	\label{fig:em_spectrum}  
 \end{figure} 
 
-The infrared radiation is made into an electrical signal in the camera, this data can be used in calculating the temperature for an object by knowing certain variables and putting these into Stefan Boltzmann's equation \ref{eq:stefan}. The emissive power denoted E, is the radiation that the detector in the camera is getting. The variables $\sigma$ are known and $\varepsilon$ is specified for the object that is being measured, eg. the human skin with emissivity between 0.95 to 0.99. The temperature are then the only variable to calculate and this is done for each pixel in the image to make up the complete thermal image of the object. Each pixel will be representing one thermal data. \cite{ignacio2017}
+The infrared radiation is made into an electrical signal in the camera, this data can be used in calculating the temperature for an object by knowing certain variables and putting these into Stefan Boltzmann's equation \ref{eq:stefan}. The emissive power denoted E, is the radiation that the detector in the camera is getting. The variables $\sigma$ are known and $\varepsilon$ is specified for the object that is being measured, eg. the human skin with emissivity between 0.95 to 0.99. The temperature are then the only variable to calculate and this is done for each pixel in the image to make up the complete thermal image of the object. Each pixel will be representing one thermal data. \cite{ignacio2017} \fxnote{explain more about how camera works.}
+
+
+
+
+
 
 
 %\section{Physical principals}
