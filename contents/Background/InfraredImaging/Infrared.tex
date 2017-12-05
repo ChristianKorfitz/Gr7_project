@@ -1,21 +1,21 @@
 
 
-Infrared imaging is an technique that utilizes infrared radiation emitted from nearly any objects. 
+Thermal imaging is an technique that utilizes infrared radiation emitted from nearly any objects. 
 The existence of infrared radiation was first discovered in 1800 by Sir Frederick William Herschel. 
-His experiments lead to the knowledge that there were a light spectrum beyond the visual spectrum humans are able to perceive.\cite{ignacio2017,optris2009}
+His experiments lead to the knowledge that there were a light spectrum beyond the visual spectrum humans are able to perceive. Any object above absolute zero emits energy-electromagnetic radiation depending on its temperature.\cite{ignacio2017,optris2009}
 
-Infrared thermography is commonly used to calculate surface temperatures and important concepts in the understanding of this are heat and temperature. 
-Temperature is a measure for the internal energy within an object and can be defined as the average kinetic energy of the object.
-Heat is the energy that passes from a warm object to another colder object. A warm object will decrease in internal energy and a cold object will increase due to the temperature difference and therefore the heat transfer. In the human body, a constant temperature is keep, due to several factors and therefore the temperature will not decrease even though a heat transfer to the surrounding environment occurs. The environmental temperature do have an impact on how large the heat transfer gradient is. If a body is in a cold environment, the emitted heat will be greater than the absorbed. In the same way, if the environment is much warmer than 37$^{\circ}$C, a greater absorption than emission will occur and the body will increase in temperature.\cite{ignacio2017} 
+Infrared radiation is also known as thermal radiation because of the relationship between temperature and infrared radiation. Temperature of the human body permits radiation in the infrared spectrum, but objects of much higher temperature are capable of emitting radiation in the visible and UV spectrum. This has to do with the difference between object and environmental temperature. If the temperature of these are relatively close to each other, the radiation emitted will be within infrared wavelengths. Infrared radiation has a wavelength from 769 nm to 1 mm. Objects emit more radiation in some region regions compared to others. Because of this is the infrared spectrum classified in the three regions, near, middle and far infrared. Near is between 769 nm and 2.5 $\mu$m, middle 2.5 $\mu$m to 50 $\mu$m and far 50 $\mu$m to 1 mm. The human body emits most radiation in the far infrared part, and most thermal cameras are build with this in mind. Near and middle cameras are used to measure gases.\cite{ignacio2017}
+Thermal imaging is commonly used to calculate surface temperatures. Two important concepts, heat and temperature emerge in the understanding of this. Temperature is a measure for the internal energy within an object and can be defined as the average kinetic energy of the object.
+Heat is the energy that passes from a warm object to a colder object. Warm objects will decrease in internal energy and cold objects will increase due to the temperature difference and therefore the heat transfer. In the human body, a constant temperature is keep, due to several factors and therefore the temperature will not decrease even though a heat transfer to the surrounding environment occurs. The environmental temperature do have an impact on how large the heat transfer gradient is. If a body is in a cold environment, the emitted heat will be greater than the absorbed. In the same way, if the environment is much warmer than 37$^{\circ}$C, a greater absorption than emission will occur and the body will increase in temperature.\cite{ignacio2017} 
 
 \section{Measuring thermal energy}
 
-The theory of the black body is important to understand the absorption and emission of light relative to temperature, because the theory of the black body is used to describe the laws of infrared radiation and its relationship to temperature. The black body is an ideal perfect emitter of infrared radiation because it absorbs all electromagnetic radiation permitted to it, and it emits the same amount of radiation as it absorbs, the absorption and emission are both equal to one. 
+The theory of the black body is important to understand the absorption and emission of light relative to temperature. Because the theory of the black body is used to describe the laws of infrared radiation and its relationship to temperature. The black body is an ideal perfect emitter of infrared radiation because it absorbs all electromagnetic radiation permitted to it, and it emits the same amount of radiation as it absorbs, the absorption and emission are both equal to one. 
 Spectral emissive power, also denoted $E_\lambda$ is the energy emitted by a surface in relation to time and range of wavelength. Figure \ref{fig:Spectral} shows an graphical illustration of spectral emissive power of the black body for specific wavelengths when the temperature changes. \cite{ignacio2017} 
 
 \begin{figure}[H]
 	\centering	\includegraphics[width=0.65\textwidth]{figures/Spectral_power_emissive}
-	\caption{Spectral power emissive as a function of wavelength for different temperatures \cite{ignacio2017}}
+	\caption{Spectral power emissive as a function of wavelength for different temperatures \cite{ignacio2017}}.
 	\label{fig:Spectral}
 \end{figure} \vspace{-.3cm}
 
@@ -24,28 +24,30 @@ The radiation from the human body which has a temperature at 37$^{\circ}$C emits
 
 Physical laws including Wien's displacement law and Stefan-Boltzmann's law are important for explaining how the infrared radiation behaves at different temperatures. \cite{ignacio2017} 
 
-Wien's displacement law tells that the wavelength of the peak of the black body radiation curve decreases as the body temperature increases. This law can be used to describe different wavelengths according to the temperature of the black body which emits the radiation. Wien's law has the following equation: 
+Wien's displacement law explains that the wavelength of the peak of the black body radiation curve decreases as the body temperature increases. This law can be used to describe different wavelengths according to the temperature of the black body which emits the radiation. Wien's law has the following equation: 
 
 \begin{flalign}
 	\lambda_{max} = \frac{a}{T}
 	\label{eq:wien}
 \end{flalign}
 
-In Wiens displacement law 'a' denotes the Wien's displacement constant, this constant has the value $2.897*10^{-3} m K$. 'T' denotes the absolute temperature in kelvin. '$\lambda_{max}$' denotes the wavelength of emission peak with unit in meters.\cite{ignacio2017} 
+$a$ has a value of $2.897*10^{-3} m K$ and denotes the Wien's displacement constant. $T$ denotes the absolute temperature in kelvin. $\lambda_{max}$ denotes the wavelength of emission peak with unit in meters.\cite{ignacio2017} 
 
-Stefan-Boltzmann's law tells that small changes in temperature will lead to big changes in emissive power. This is seen in Stefan-Boltzmann's equation because it states that the total emissive power is proportional to the fourth power of the absolute  temperature. \cite{ignacio2017}
+Stefan-Boltzmann's law explains that small changes in temperature will lead to big changes in emissive power. This is seen in Stefan-Boltzmann's equation because it states that the total emissive power is proportional to the fourth power of the absolute  temperature. \cite{ignacio2017}
 
 \begin{flalign}
 	E = {\varepsilon}*{\sigma}*{T^4}
 	\label{eq:stefan}
 \end{flalign}
 
-In Stefan-Boltzmann's equation 'E' denotes the total emissive power with unit $W/m^{2}$. '$\sigma$' denotes the Stefan-Boltzmann's constant, this has a value of $5.67*10^{-8} W/m^{-2} K^{-4}$ and 'T' is the temperature in kelvin. '$\varepsilon$' denotes the emissivity and is normally not a part of the Stefan-Boltzmann's law, but part of the modified Stefan-Boltzmann's equation, because it is used for calculation of temperature in most thermal cameras. Emissivity is different for all materials. Skin have an emissivity between 0.95 to 9.99, why these values typically are used when assessing the temperature of the skin of the human body with thermography.
-This law is important when considering infrared thermography because the sensitivity when calculating the temperature from the emissive power is big. \cite{ignacio2017}
+In Stefan-Boltzmann's equation $E$ denotes the total emissive power with unit $W/m^{2}$. $\sigma$ denotes the Stefan-Boltzmann's constant, and has a value of $5.67*10^{-8} W/m^{-2} K^{-4}$. $T$ is the temperature in kelvin. $\varepsilon$ denotes the emissivity and is normally not a part of the Stefan-Boltzmann's law, but part of the modified Stefan-Boltzmann's equation, because it is used for calculation of temperature in most thermal cameras. 
+
+Emissivity is different for all materials. Skin have an emissivity between 0.95 to 9.99, why these values typically are used when assessing the temperature of the skin of the human body with thermal imaging.
+This law is important when considering thermal imaging because the sensitivity when calculating the temperature from the emissive power is considerable. \cite{ignacio2017}
 
 \textbf{Region of interest}
 
-Region of interest (RIO) is an important consideration when doing measurements with thermal imaging. One of the reasons why this is an important aspect is because it is the RIO that lays the foundation of the data that goes into the statistical analysis. A minimum of 25 pixels is recommended for the RIO to reduce error in the data. To get the best measurement the RIO should be filling most of the image to get the best thermal data and better resolution in the area you want to measure.\cite{ignacio2017}   
+Region of interest (RIO) is an important consideration when doing measurements with thermal imaging. One of the reasons why this is an important aspect is because it is the RIO that lays the foundation of the data that goes into the statistical analysis. A minimum of 25 pixels is recommended for the RIO to reduce error in the data. To get the best measurement the RIO should be filling most of the image to get the best thermal data and better resolution in the area you want to measure.\cite{ignacio2017}  \fxnote{This is very badly explained. It it needed?} 
 
 \textbf{Thermal cameras} \label{sec:cam}
 
@@ -57,50 +59,55 @@ The radiation emitted from an object is focusing the RIO onto an array of detect
 	\label{fig:em_spectrum}  
 \end{figure} 
 
-The infrared radiation is made into an electrical signal in the camera, this data can be used in calculating the temperature for an object by knowing certain variables and putting these into Stefan Boltzmann's equation \ref{eq:stefan}. The emissive power denoted E, is the radiation that the detector in the camera is getting. The variables $\sigma$ are known and $\varepsilon$ is specified for the object that is being measured, eg. the human skin with emissivity between 0.95 to 0.99. The temperature are then the only variable to calculate and this is done for each pixel in the image to make up the complete thermal image of the object. Each pixel will be representing one thermal data. \cite{ignacio2017}
-
-
-\section{Physical principals}
-
-Any object above absolute zero emits energy-electromagnetic radiation depending on its temperature. Absolute zero is $0K$ or $ -273.16^{\circ}$C. To put that into perspective the human body has a temperature around 37$^{\circ}$C.\cite{ignacio2017,optris2009}
-
-Electromagnetic radiation is a propagation of energy trough a medium without the transportation of mass. An electromagnetic wave is made of the relationship between frequency $f$, wavelength $\lambda$ and the speed of light $c$. This is stated in the equation of wave motion.\cite{ignacio2017}  
-\begin{flalign}
-	\lambda = \frac{c}{f}
-	\label{eq:wave}
-\end{flalign}
-Depending on the frequency and wavelength certain characteristics arise from what is called the electromagnetic spectrum. The electromagnetic spectrum is the electromagnetic energy that is emitted. This extends from radiation of low energy such as radio waves and infrared, to waves of higher energy in form of eg. X-rays. A graphical representation of the electromagnetic spectrum can be seen on \cref{fig:em_spectrum}.\cite{ignacio2017}        
-
-\begin{figure}[H]                                         
-	\includegraphics[width=.66\textwidth]{figures/em_spectrum}  
-	\caption{The electromagnetic spectrum with wavelength, emitters, frequency and temperature.\cite{ignacio2017}}
-	\label{fig:em_spectrum}  
-\end{figure}   
-
-Infrared radiation is also known as thermal radiation because of the relationship between temperature and infrared radiation. Temperature of the human body permits radiation in the infrared spectrum, but objects of much higher temperature are capable of emitting radiation in the visible and UV spectrum. This has to do with the difference between object and environmental temperature. If the temperature of these are relatively close to each other, the radiation emitted will be within infrared wavelengths. Infrared radiation has a wavelength from 769 nm to 1 mm. Objects emit more radiation in some region regions compared to others. Because of this is the infrared spectrum classified in the three regions, near, middle and far infrared. Near is between 769 nm and 2.5 $\mu$m, middle 2.5 $\mu$m to 50 $\mu$m and far 50 $\mu$m to 1 mm. The human body emits most radiation in the far infrared part, and most thermal cameras are build with this in mind. Near and middle cameras are used to measure gases.\cite{ignacio2017} 
+The infrared radiation is made into an electrical signal in the camera, this data can be used in calculating the temperature for an object by knowing certain variables and putting these into Stefan Boltzmann's equation \ref{eq:stefan}. The emissive power denoted E, is the radiation that the detector in the camera is getting. The variables $\sigma$ are known and $\varepsilon$ is specified for the object that is being measured, eg. the human skin with emissivity between 0.95 to 0.99. The temperature are then the only variable to calculate and this is done for each pixel in the image to make up the complete thermal image of the object. Each pixel will be representing one thermal data. \cite{ignacio2017} \fxnote{explain more about how camera works.}
 
 
 
 
-%A bit more needs to be written here i think..
+
+
+
+%\section{Physical principals}
+%
+%Any object above absolute zero emits energy-electromagnetic radiation depending on its temperature. Absolute zero is $0K$ or $ -273.16^{\circ}$C. To put that into perspective the human body has a temperature around 37$^{\circ}$C.\cite{ignacio2017,optris2009}
+%
+%Electromagnetic radiation is a propagation of energy trough a medium without the transportation of mass. An electromagnetic wave is made of the relationship between frequency $f$, wavelength $\lambda$ and the speed of light $c$. This is stated in the equation of wave motion.\cite{ignacio2017}  
+%\begin{flalign}
+%	\lambda = \frac{c}{f}
+%	\label{eq:wave}
+%\end{flalign}
+%Depending on the frequency and wavelength certain characteristics arise from what is called the electromagnetic spectrum. The electromagnetic spectrum is the electromagnetic energy that is emitted. This extends from radiation of low energy such as radio waves and infrared, to waves of higher energy in form of eg. X-rays. A graphical representation of the electromagnetic spectrum can be seen on \cref{fig:em_spectrum}.\cite{ignacio2017}        
+%
+%\begin{figure}[H]                                         
+%	\includegraphics[width=.66\textwidth]{figures/em_spectrum}  
+%	\caption{The electromagnetic spectrum with wavelength, emitters, frequency and temperature.\cite{ignacio2017}}
+%	\label{fig:em_spectrum}  
+%\end{figure}   
+%
+%Infrared radiation is also known as thermal radiation because of the relationship between temperature and infrared radiation. Temperature of the human body permits radiation in the infrared spectrum, but objects of much higher temperature are capable of emitting radiation in the visible and UV spectrum. This has to do with the difference between object and environmental temperature. If the temperature of these are relatively close to each other, the radiation emitted will be within infrared wavelengths. Infrared radiation has a wavelength from 769 nm to 1 mm. Objects emit more radiation in some region regions compared to others. Because of this is the infrared spectrum classified in the three regions, near, middle and far infrared. Near is between 769 nm and 2.5 $\mu$m, middle 2.5 $\mu$m to 50 $\mu$m and far 50 $\mu$m to 1 mm. The human body emits most radiation in the far infrared part, and most thermal cameras are build with this in mind. Near and middle cameras are used to measure gases.\cite{ignacio2017} 
 %
 %
-%Extra notes that i'we just copied that we can use later 
 %
-%The advantages of non-contact temperature measurement
-%are obvious – it supports:
 %
-%• Temperature measurements of moving or overheated
-%objects and of objects in hazardous surroundings
-%
-%• Very fast response and exposure times
-%
-%• Non-interactive measurement, no influence on
-%the measuring object
-%
-%• Non-destructive measurement
-%
-%• Measurement point durability, no mechanical wear
+%%A bit more needs to be written here i think..
+%%
+%%
+%%Extra notes that i'we just copied that we can use later 
+%%
+%%The advantages of non-contact temperature measurement
+%%are obvious – it supports:
+%%
+%%• Temperature measurements of moving or overheated
+%%objects and of objects in hazardous surroundings
+%%
+%%• Very fast response and exposure times
+%%
+%%• Non-interactive measurement, no influence on
+%%the measuring object
+%%
+%%• Non-destructive measurement
+%%
+%%• Measurement point durability, no mechanical wear
 
 
 
