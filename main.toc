@@ -1,0 +1,40 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\contentsline {part}{I\hspace {1em}Background}{1}{part.1}
+\contentsline {chapter}{\numberline {1}Anatomy and Physiology}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Macrocirculatory system}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Microcirculatory system}{3}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Vasomotion}{4}{subsection.1.2.1}
+\contentsline {chapter}{\numberline {2}Hemodynamics}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}Physiological Base}{6}{section.2.1}
+\contentsline {section}{\numberline {2.2}Physical Base}{6}{section.2.2}
+\contentsline {chapter}{\numberline {3}Vasomotion in disease}{8}{chapter.3}
+\contentsline {chapter}{\numberline {4}Methods of studying vasomotion}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Techniques of measuring vasomotion}{11}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Summarizing}{13}{subsection.4.1.1}
+\contentsline {chapter}{\numberline {5}Infrared Thermal Imaging}{14}{chapter.5}
+\contentsline {section}{\numberline {5.1}Measuring thermal energy}{14}{section.5.1}
+\contentsline {part}{II\hspace {1em}Methods}{18}{part.2}
+\contentsline {chapter}{\numberline {6}Study setup}{19}{chapter.6}
+\contentsline {section}{\numberline {6.1}Subjects}{19}{section.6.1}
+\contentsline {section}{\numberline {6.2}Test setting}{20}{section.6.2}
+\contentsline {section}{\numberline {6.3}Software setting}{21}{section.6.3}
+\contentsline {chapter}{\numberline {7}Interpretation of data}{22}{chapter.7}
+\contentsline {section}{\numberline {7.1}Continous wavelet transformation}{22}{section.7.1}
+\contentsline {section}{\numberline {7.2}The paired t-test}{24}{section.7.2}
+\contentsline {part}{III\hspace {1em}Data analysis}{26}{part.3}
+\contentsline {chapter}{\numberline {8}Preparation of the data}{27}{chapter.8}
+\contentsline {section}{\numberline {8.1}Dividing the data into frames}{27}{section.8.1}
+\contentsline {section}{\numberline {8.2}Regions of interest}{28}{section.8.2}
+\contentsline {section}{\numberline {8.3}Artifacts in temperature recording}{29}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Thermal pixel drift}{30}{subsection.8.3.1}
+\contentsline {section}{\numberline {8.4}Correction method}{30}{section.8.4}
+\contentsline {part}{IV\hspace {1em}Results}{35}{part.4}
+\contentsline {chapter}{\numberline {9}Results}{36}{chapter.9}
+\contentsline {section}{\numberline {9.1}Mean value test}{36}{section.9.1}
+\contentsline {section}{\numberline {9.2}T-value mapping}{36}{section.9.2}
+\contentsline {section}{\numberline {9.3}ANOVA}{37}{section.9.3}
+\contentsline {part}{V\hspace {1em}Discussion}{38}{part.5}
+\contentsline {chapter}{\numberline {10}Discussion}{39}{chapter.10}
+\contentsline {chapter}{\numberline {A}Protocol}{43}{Appendix.a.A}
