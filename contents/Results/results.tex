@@ -4,7 +4,7 @@
 \section{Paired t-test}
 To test if there is a statistical significant difference between the uncuffed and cuffed condition a paired t-test is applied on the outcome data from the data analysis. The approach builds on using the total mean of each frequency band, condensing these down to just one number for each frequency band for one ROI for one subject. 
 
-Before a paired t-test is calculated for the data, a boxplot is computed to get a visual representation of the data of the three frequency bands. The boxplots can be seen in \figref{fig:boxEndo} throughout \figref{fig:boxMyo}. 
+Before a paired t-test is calculated for the data, a boxplot is computed to get a visual representation of the data of the three frequency bands. The boxplots can be seen in \figref{fig:boxEndo} throughout \figref{fig:boxMyo}. The boxplots show points for each mean of the magnitude, a line is connecting the before and after condition to indicate if there has been an increase or decrease in magnitude. 
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{figures/boxplot_endo}
@@ -24,7 +24,7 @@ Before a paired t-test is calculated for the data, a boxplot is computed to get 
 	\label{fig:boxMyo}
 \end{figure}
 
-The boxplots show points for each mean of the magnitude, a line is connecting the before and after condition to indicate if there has been an increase or decrease in magnitude. A paired t-test will be performed on all five regions, where uncuffed is the before condition and cuffed is the after condition. The outcome of the paired t-test will either be rejecting the h0 hypothesis, that there is no difference between the two conditions, or not rejecting the h0 hypothesis, which indicates that there is a difference.
+A paired t-test will be performed on all five regions, where uncuffed is the before condition and cuffed is the after condition. The outcome of the paired t-test will either be rejecting the h0 hypothesis, that there is no difference between the two conditions, or not rejecting the h0 hypothesis, which indicates that there is a difference.
  
 %In the paired t-test none of the data from the frequency bands show a significant difference between subject in cuffed and uncuffed condition. 
 A table showing the p-values of the statistical test is shown in \ref{my:pval}. 
