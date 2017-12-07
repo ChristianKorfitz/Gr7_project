@@ -1,7 +1,7 @@
 \section{Correction method}
 \label{sec:correction_method}
 With the knowledge of what might be the source of the artifacts seen in the temperature recording, it is chosen to find a way to compensate and correct the recording.
-Jumps occur in each region of interest at the same time and are shown by a high difference of the values between two frames. The amount of the observed jumps varies between 0 and 20 in the recordings. Furthermore the appearance of the jumps is non-periodic and in each recording at different time points and interval.\fxnote{show the one with no jumps also to see difference}
+Jumps occur in each region of interest at the same time and are shown by a high difference of the values between two frames. The amount of the observed jumps varies between 0 and 20 in the recordings. Furthermore the appearance of the jumps is non-periodic and in each recording at different time points and interval.\fxnote{show the one with no jumps also to see difference but it is shown later}
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{figures/raw15}
 	\caption{The original data of region 15 in the uncuffed recording of subject 1 including 20 jumps.}
@@ -51,7 +51,7 @@ As shown in figure \ref{fig:reg15} the new orientation straight fits the regress
 %	\caption{Scalogram from the corrected data of region 24 in the cuffed recording of subject 1, where a dampening of the high spike and drift magnitudes induced by the jumps has been achieved.}
 %	\label{fig:scalogram_corr}
 %\end{figure} 
-However, this method still has weak points. In figures \ref{fig:raw15} - \ref{fig:corr15} region of interest is located in the center of the thermal image. Regions which are located in the outer area of the thermal image show a few jumps after the correction which are bigger than before, illustrated on \figref{fig:corr23}. These extended jumps are due to the fact that the thermal image is more unstable in the outer areas than in the center, thus the pixel drift is increasing with increasing distance to the center. \fxnote{maybe mention that the regression is linear and will not fit all the data thereby}
+However, this method still has weak points. In figures \ref{fig:raw15} - \ref{fig:corr15} region of interest is located in the center of the thermal image. Regions which are located in the outer area of the thermal image show a few jumps after the correction which are bigger than before, illustrated on \figref{fig:corr23}. These extended jumps are due to the fact that the thermal image is more unstable in the outer areas than in the center, thus the pixel drift is increasing with increasing distance to the center of the thermal image. That means that in the corrected data of ROIs located in the outer areas of the thermal image still artifacts occur. 
 \begin{figure}[H]
 	\includegraphics[width=0.9\textwidth]{figures/corr23pfeile}
 	\caption{Corrected data of the uncuffed recording of subject 1 in region 23 shown in yellow. Red arrows show the jumps in this signal.}
