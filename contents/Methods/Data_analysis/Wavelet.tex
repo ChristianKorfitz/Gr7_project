@@ -1,9 +1,9 @@
 \section{Continous wavelet transformation}
 
 Analysis of the collected data from the thermal camera will be done in the time frequency domain. For this the wavelet transformation will be used to look for specific frequency content in the data. 
-Wavelet transformation is practical when looking for signals of lower frequencies compared to the normal fourier analysis, because of the bigger resolution in the wavelet analysis.\cite{geyer2004} Another drawback of the fourier transform is the loss of time information, which is preserved with the wavelet transformation. 
+Wavelet transformation is practical when looking for signals of lower frequencies compared to the normal Fourier analysis, because of the bigger resolution in the wavelet analysis.\cite{geyer2004} Another drawback of the Fourier transform is the loss of time information, which is preserved with the wavelet transformation. 
 
-Both the discrete and the continuous wavelet transformation can be used, but the continuous wavelet transformation has better resolution, why this is being used for interpreting the data.\cite{greyer2004} 
+Both the discrete and the continuous wavelet transformation can be used, but the continuous wavelet transformation has better resolution, why this is being used for interpreting the data.\cite{geyer2004} 
 
 The continuous wavelet transformation is using a variable sized region windowing technique. Long time intervals are used where low frequency information is computed and short time intervals are used where high frequency information is computed. This is represented in \figref{fig:sigToWave}.
 
@@ -36,17 +36,17 @@ W(t,s) = \int_{-\infty}^{\infty} \frac{1}{s^n} \psi *(\frac{\tau-t}{\s})x(\tau)d
 Where $\psi *(\frac{\tau-t}{\s})$ is the wavelet and $x(\tau)$ is the signal.\cite{Uvo1995, Conraria2011}
 
 The signal or function is put into the continuous wavelet transformation equation \ref{eq:cwt}.
-The wavelet transform will give a scolargram as an output.
-In Matlab the function cwt can be used to compute the continuous wavelet transformation by inserting the signal and the sampling frequency. This will give a scolargram as shown in  \figref{fig:scolargram}. \cite{mathworks2017} 
-The frequencies in Hz are shown along the y-axis if the sampling frequency is specified, else it will show the normalized frequency in cycles pr. sample. Along the x-axis is the time vector. The scolargram show the magnitude of the signal to show how the frequency in the signal is distributed. A scale to see the size of the magnitude is also implied. An example of a scolargram is given in \figref{fig:scolargram}
+The wavelet transform will give a scalorgram as an output.
+In Matlab the function cwt can be used to compute the continuous wavelet transformation by inserting the signal and the sampling frequency. This will give a scolargram as shown in  \figref{fig:scalorgram}. \cite{mathworks2017} 
+The frequencies in Hz are shown along the y-axis if the sampling frequency is specified, else it will show the normalized frequency in cycles pr. sample. Along the x-axis is the time vector. The scalorgram show the magnitude of the signal to show how the frequency in the signal is distributed. A scale to see the size of the magnitude is also implied. An example of a scalorgram is given in \figref{fig:scalorgram}
 
 \begin{figure}[H]
 	\centering	\includegraphics[width=0.65\textwidth]{figures/scolargram}
-	\caption{An example of a scolargram, showing frequency content at 32 Hz at time approx 0.2 sec and 64 Hx at approx 0.8 sec \cite{mathworks2017}}
+	\caption{An example of a scolargram, showing frequency content at 32 Hz at time approx 0.2 sec and 64 Hz at approx 0.8 sec \cite{mathworks2017}}
 	\label{fig:scolargram}
 \end{figure} \vspace{-.3cm}
 
-
+The signal of the wavelet is typically of a finite length, which sets some limitations to the cwt, like the edge effect. The cone of influence (COI) shows the regions of the cwt where edge effects become significant. The gray zone are the areas where the edge effects become significant, which means that there will be some uncertainties to the cwt in this zone.
 
 %\begin{flalign}
 %W(t,s) \equiv \int_{-\infty}^{\infty} \frac{1}{s^n} \psi *(\frac{\tau-t}{\s})x(\tau)d\tau
