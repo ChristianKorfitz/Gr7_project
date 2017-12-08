@@ -6,7 +6,7 @@ Regions in the fingertips and nail folds are areas where it is easy to access th
 The original image on \figref{fig:hand} is showing the hand but not with very good contrast. To easier choose ROI, the original image was converted to a gray scale image to improve the contrast in the image, this can be seen in \figref{fig:mat2grayHand}. 
 
 \begin{figure}[H]
-	\includegraphics[width=0.5\textwidth]{figures/mat2grayHand}  %<--but is not needed.
+	\includegraphics[width=0.6\textwidth]{figures/mat2grayHand}  %<--but is not needed.
 	\caption{High contrast thermal image for subject one.}
 	\label{fig:mat2grayHand}  %<--give the figure a label, so you can reference!
 \end{figure}
@@ -14,7 +14,7 @@ The original image on \figref{fig:hand} is showing the hand but not with very go
 With the improved contrast, 28 ROI from the hand were chosen on the first image of the thermal image series, by finding the coordinates of the pixels on the image. The regions are illustrated on \figref{fig:roiHand}. The localization of the regions is originating from the fingertips and elongating down the hand to the beginning of the wrist. Each region gives an pixel intensity value from one pixel of the image. In the setup of this study one pixel corresponds to an area on the hand with a diameter of about 17$\mu$m. Based on the fact, that the capillaries have an average diameter of 8$\mu$m \cite{martini2012}, it is sufficient to represent each region with just one pixel. Even the area represented by one pixel contains more than one capillary.
 
 \begin{figure}[H]
-	\includegraphics[width=0.5\textwidth]{figures/roiHand}  %<--but is not needed.
+	\includegraphics[width=0.6\textwidth]{figures/roiHand}  %<--but is not needed.
 	\caption{First thermal image of the thermal image series for subject 1, with ROI of interest plottet on 28 areas of the hand represented as red circles}
 	\label{fig:roiHand}  %<--give the figure a label, so you can reference!
 \end{figure}
@@ -24,7 +24,7 @@ Iterating over the image series saving ROI into a cell array with data points fo
 An example of the pixel intensities for subject 1 is shown on figure \figref{fig:Intensities}.
 
 \begin{figure}[H]
-	\includegraphics[width=1\textwidth]{figures/Intensities}  %<--but is not needed.
+	\includegraphics[width=1.2\textwidth]{figures/Intensities}  %<--but is not needed.
 	\caption{Pixel intensity for all 28 ROI, plottet from subject 1, for the entire thermal image series of a measurement.}
 	\label{fig:Intensities}  %<--give the figure a label, so you can reference!
 \end{figure}
