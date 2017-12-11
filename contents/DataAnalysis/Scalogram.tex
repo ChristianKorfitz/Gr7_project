@@ -23,7 +23,7 @@ The artifact components of the raw signal can be sorted into three categories:
 \end{itemize}
 
 Uniform white noise artifacts is characterized by having the same magnitude in all frequencies. This artifact will therefore not affect the signal of interest, because it will have a flat power spectral density throughout the bandwidth of the frequencies, because the signal of the white noise are independent and evenly distributed \cite{hida2014}. 
-The jumps in the signal is induces by the auto-adjustments from the camera described in \ref{sec:artifacts}. The drift artifacts can be seen as magnitudes in the scalogram as lower frequencies than the jumps. A frequency band occur at each jump, indicating that the drift is not uniform between intervals.
+The jumps in the signal is induces by the auto-adjustments from the camera described in \ref{sec:artifacts}. The drift artifacts can be seen as magnitudes in the scalogram as lower frequencies than the jumps. A frequency band leading up to a high spike occur with each jump indicated with black arrows arrow in \figref{fig:scalogram_uncorr}, indicating that the drift is not uniform between intervals.
 The artifact components will be disturbing the presumed signal from the micro oscillations to get a representative cwt, because this signal can be hidden by the artifacts. The artifacts are not constant for each recording, why the correction of the signal has been implemented.
 
 \begin{figure}[H]
@@ -32,9 +32,9 @@ The artifact components will be disturbing the presumed signal from the micro os
 	\label{fig:scalogram_corr}
 \end{figure} 
 
-After the correction of the signal, the energy has been reduced in the areas induced from the jumps and the drift. The scalogram is left with less energy overall as seen in \figref{scalogram_corr}. %It can be discussed if the correction of the signal affects the signal of interest. 
+After the correction of the signal, the energy has been reduced in the areas induced from the jumps and the drift. The scalogram is left with less energy overall as seen in \figref{fig:scalogram_corr}. %It can be discussed if the correction of the signal affects the signal of interest. 
 
-The three frequency bands are marked with red arrows in the scalogram seen in \figref{fig:scalogram_corr}.
+The three frequency bands are divided by black lines in the scalogram seen in \figref{fig:scalogram_corr}.
 To prepare the data for the statistical test, the average magnitude for each time period of each frequency band is first calculated by equation \ref{eq:W_avg}.
 \begin{flalign}
 W(n_{f})=\frac{1}{N} \sum_{n=1}^{N} W_n(n_{f})
