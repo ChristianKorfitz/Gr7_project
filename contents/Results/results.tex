@@ -1,33 +1,29 @@
 \chapter{Results}
-\textit{In this chapter the results on behalf of the data analysis will be shown. A paired t-test of the mean magnitude for each frequency band specified in \ref{sec:...} is computed to test the significance level of the difference for the uncuffed and cuffed conditions.}
+\textit{In this chapter the results on behalf of the data analysis will be shown. A paired t-test of the mean magnitude for each frequency band specified in \ref{sec:thermalImaging} is computed to test the likelihood of finding a difference between the uncuffed and cuffed conditions.}
 
 \section{Paired t-test}
-To test if there is a statistical significant difference between the uncuffed and cuffed condition a paired t-test is applied on the outcome data from the data analysis. The approach builds on using the total mean of each frequency band, condensing these down to just one number for each frequency band for one ROI for one subject. 
-
-Before a paired t-test is calculated for the data, a boxplot is computed to get a visual representation of the data of the three frequency bands. The boxplots can be seen in \figref{fig:boxEndo} throughout \figref{fig:boxMyo}. The boxplots show points for each mean magnitude for each subject ordered by color, a line is connecting the before and after condition to indicate if there has been an increase or decrease in magnitude. 
+The boxplots can be seen in \figref{fig:boxEndo} throughout \figref{fig:boxMyo}. The boxplots show points for each mean magnitude for each subject ordered by color, a line is connecting the before and after condition to indicate if there has been an increase or decrease in magnitude. 
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{figures/boxplot_endo}
-	\caption{Boxplot for mean magnitude for the endothelial frequency band, for uncuffed versus cuffed in five ROI.}
+	\caption{Boxplot for mean magnitude in the endothelial frequency band, for both conditions in five ROI.}
 	\label{fig:boxEndo}
 \end{figure}
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{figures/boxplot_neuro}
-	\caption{Boxplot for mean magnitude for the neurogenic frequency band, for uncuffed versus cuffed in five ROI.}
+	\caption{Boxplot for mean magnitude in the neurogenic frequency band, for both conditions in five ROI.}
 	\label{fig:boxNeuro}
 \end{figure}
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{figures/boxplot_myo}
-	\caption{Boxplot for mean magnitude for the myogenic frequency band, for uncuffed versus cuffed in five ROI.}
+	\caption{Boxplot for mean magnitude in the myogenic frequency band, for for both conditions in five ROI.}
 	\label{fig:boxMyo}
 \end{figure}
-
-A paired t-test will be performed on all five regions, where uncuffed is the before condition and cuffed is the after condition. The outcome of the paired t-test will either be rejecting the h0 hypothesis, that there is no difference between the two conditions, or not rejecting the h0 hypothesis, which indicates that there is a difference.
  
 %In the paired t-test none of the data from the frequency bands show a significant difference between subject in cuffed and uncuffed condition. 
-A table showing the p-values of the statistical test is shown in \ref{my:pval}. 
+The outcome of the paired t-test is a table showing the p-values, which is shown in \ref{my:pval}. 
 \begin{table}[H]
 	\centering
 	\scalebox{0.8}{
@@ -43,8 +39,8 @@ A table showing the p-values of the statistical test is shown in \ref{my:pval}.
 \caption{Table showing the p-values corresponding to specific ROI in correlation with frequency band.}
 	\label{my:pval}
 \end{table}
-As indicated in table \ref{my:pval}, all of the tests show a significance level well above 0.005. %The lowest p-value is presented in region 22 where a p-value of 0.1552 for the neurogenic band is found. 
-When reflecting the p-values onto the boxplots it can easily be seen the correlation between the p-values and the occurrence of a difference in the dataset hence there are slightly more difference in some of the means. 
+As indicated in table \ref{my:pval}, all of the tests show a significance level well above 0.005, which means that $h_{0}$ is not rejected, whereby there is no difference between the two conditions. %The lowest p-value is presented in region 22 where a p-value of 0.1552 for the neurogenic band is found. 
+When reflecting the p-values onto the boxplots the correlation between the p-values and the occurrence of a difference in the dataset can be seen. For instance the lowest p-value of 0.1552 indicates the greatest difference between means, this can also be seen in figure \figref{fig:boxNeuro} for ROI 22. 
   
 %\section{T-value mapping}
 %Results illustrated on \figref{fig:black}, shows a t-value mapped image from a summation of each subjects scalogram within the two conditions. The y-axis shows the number of different frequencies and the x-axis is time, giving in number of frames. Each pixel within the image has a t-value corresponding to the test of the uncuffed pixel value compared to the cuffed pixel value. The larger t-value, the brighter a pixel will appear in the image. The image showed no areas where a greater difference could be observed. Mostly individual pixels lid up showing a great difference, but as these are individual and not part of an area, these are considered outliers.  
