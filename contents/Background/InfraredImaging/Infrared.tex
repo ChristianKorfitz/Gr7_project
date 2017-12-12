@@ -1,4 +1,4 @@
-\subsection{Introduction to thermal imaging}
+\section{Introduction to thermal imaging}
 
 Thermal imaging is an technique that utilizes infrared radiation emitted from nearly any objects. 
 The existence of infrared radiation was first discovered in 1800 by Sir Frederick William Herschel. 
@@ -46,13 +46,12 @@ In Stefan-Boltzmann's equation $E$ denotes the total emissive power with unit $W
 Emissivity is different for all materials. Skin have an emissivity between 0.95 to 9.99, why these values typically are used when assessing the temperature of the skin of the human body with thermal imaging.
 This law is important when considering thermal imaging because the sensitivity when calculating the temperature from the emissive power is considerable. \cite{ignacio2017}
 
-\textbf{Region of interest}
-
-Region of interest (RIO) is an important consideration when doing measurements with thermal imaging. One of the reasons why this is an important aspect is because it is the RIO that lays the foundation of the data that goes into the statistical analysis. A minimum of 25 pixels is recommended for the RIO to reduce error in the data. To get the best measurement the RIO should be filling most of the image to get the best thermal data and better resolution in the area you want to measure.\cite{ignacio2017}  \fxnote{This is very badly explained. It it needed?} 
 
 \textbf{Thermal cameras} \label{sec:cam}
 
-The radiation emitted from an object is focusing the RIO onto an array of detectors via a lens in the thermal camera. The array is also called the focal plane array and consists of typically $384 * 288$ to $1024 * 768$ single microbolometers.\cite{olbrycht2015} The radiation emitted to the detectors generates an electric output proportional to the radiation. The output is then undergoing amplification before further signal processing that digitalizes the signal into pixels. This allows the final output signal to be viewed as a temperature for the object on an monitor, this is also illustrated on figure \ref{fig:em_spectrum}. \cite{optris2009}
+Thermal cameras contain a lens to focus the electromagnetic radiation emitted by an object onto a detector element. A focal plan array (FPA) contains between $384\times 288$ and $1024\times 768$ microbolometers and is often used as detector element in uncooled thermal cameras.\cite{olbrycht2015,optris2009} 
+The thermal radiation focused by the lens warms up the microbolometers in the FPA. Since microbolometers contain temperature-dependent electric resistance, the voltage of the electrical outcome signal is depending on the detected radiation.
+The output is then undergoing amplification before further signal processing that digitalizes the signal into pixels. This allows the final output signal to be viewed as a temperature for the object on an monitor, this is also illustrated on figure \ref{fig:em_spectrum}. \cite{optris2009}
 
 \begin{figure}[H]                                         
 	\includegraphics[width=.55\textwidth]{figures/IR_cam}  
@@ -60,7 +59,7 @@ The radiation emitted from an object is focusing the RIO onto an array of detect
 	\label{fig:em_spectrum}  
 \end{figure} 
 
-The infrared radiation is made into an electrical signal in the camera, this data can be used in calculating the temperature for an object by knowing certain variables and putting these into Stefan Boltzmann's equation \ref{eq:stefan}. The emissive power denoted E, is the radiation that the detector in the camera is getting. The variables $\sigma$ are known and $\varepsilon$ is specified for the object that is being measured, eg. the human skin with emissivity between 0.95 to 0.99. The temperature are then the only variable to calculate and this is done for each pixel in the image to make up the complete thermal image of the object. Each pixel will be representing one thermal data. \cite{ignacio2017} \fxnote{explain more about how camera works.}
+The infrared radiation is made into an electrical signal in the camera, this data can be used in calculating the temperature for an object by knowing certain variables and putting these into Stefan Boltzmann's equation \ref{eq:stefan}. The emissive power denoted E, is the radiation that the detector in the camera is getting. The variables $\sigma$ are known and $\varepsilon$ is specified for the object that is being measured, eg. the human skin with emissivity between 0.95 to 0.99. The temperature are then the only variable to calculate and this is done for each pixel in the image to make up the complete thermal image of the object. Each pixel will be representing one thermal data. \cite{ignacio2017}
 
 
 
