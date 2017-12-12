@@ -26,8 +26,12 @@ The first implemented method is based on the assumption that the drift is equal 
 	\label{eq:slope}
 \end{flalign}
 To compensate for the drift, a straight with the inverse slope and starting point in the first data point of the interval has been calculated. The middle points between the original data and the new calculated straight build the correction of the data signal.
-This correction only worked partially where several parts showed less drift and lower jumps. Through the method worked at some parts it still had a lot of weak points. Primarily because some jumps had been strengthened. Due to the outcome of this method, the assumption, that the drift is equal in each interval has been discarded. 
-\fxnote{figure missing}
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{figures/old_correction_sub1}
+	\caption{The original data of ROI 15 in blue and ROI 23 in yellow. Applied correction of ROI 15's data in red and ROI 23's data in purple.}
+	\label{fig:oldcorr}
+\end{figure}
+As it can be seen in figure \ref{fig:oldcorr} this correction only worked partially where several parts showed less drift and lower jumps. Through the method worked at some parts it still had a lot of weak points. Primarily because some jumps had been strengthened. Due to the outcome of this method, the assumption, that the drift is equal in each interval has been discarded. 
 
 \textbf{Method 2: Regression of each interval}
 
