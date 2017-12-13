@@ -1,10 +1,10 @@
 \section{Correction method}
 \label{sec:correction_method}
 With the knowledge of what might be the source of the artifacts seen in the temperature recording, it is chosen to find a way to compensate and correct the recording.
-Jumps occur in each region of interest at the same time and are shown by a high difference of the values between two frames. The amount of the observed jumps varies between 0 and 20 in the recordings. Furthermore the appearance of the jumps is non-periodic and in each recording at different time points and interval.
+Jumps occur in each region of interest at the same time and are shown by a high difference of the values between two frames. The amount of the observed jumps varies between 0 and 20 in the recordings. Furthermore the appearance of the jumps is non-periodic and in each recording at different time points and interval. An example of a signal with jumps is seen in figure \figref{fig:raw15}
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{figures/raw15}
-	\caption{The original data of region 15 in the uncuffed recording of subject 1 including 20 jumps.}
+	\caption{Raw signal of region 15 in the uncuffed recording of subject 1 including 20 jumps.}
 	\label{fig:raw15}
 \end{figure}
 %A continuous wavelet transform show the time frequency analysis content of the data for each region. Frequencies of higher magnitude will show up with brighter colors, which can also be seen on the magnitude colorbar for comparison of the magnitude in values. 
@@ -14,9 +14,10 @@ Jumps occur in each region of interest at the same time and are shown by a high 
 %	\caption{Scalogram from the original data of region 15 in the uncuffed recording of subject 1, where high spike magnitudes can be seen induced by the jumps.}
 %	\label{fig:scalogram_uncorr}
 %\end{figure}
-From the raw data magnitude of the scalogram show high magnitude peaks exactly at the same time points where the jumps are occurring, which can be seen in figure \ref{fig:scalogram_uncorr}. Due to this falsifying of the magnitude, the results of the data analysis are also falsified.\fxnote{We cannot ref to a figure that comes 4 pages later...}
+%From the raw data magnitude of the scalogram show high magnitude peaks exactly at the same time points where the jumps are occurring, which can be seen in figure \ref{fig:scalogram_uncorr}. Due to this falsifying of the magnitude, the results of the data analysis are also falsified.\fxnote{We cannot ref to a figure that comes 4 pages later...}
 
-Additionally there is also a drift occurring within each interval between two jumps, which hampers the correct data analysis, this can also be seen in figure \ref{fig:scalogram_uncorr} as the frequency band with higher magnitude. To reduce the drift component and the jumps in the signals, the two following correction methods have been compiled, whereby the second one has been implemented.
+Additionally there is also a drift occurring within each interval between two jumps, which hampers the correct data analysis.% this can also be seen in figure \ref{fig:scalogram_uncorr} as the frequency band with higher magnitude. 
+To reduce the drift component and the jumps in the signals, the two following correction methods have been compiled, whereby the second one has been implemented.
 
 \textbf{Method 1: Regression of first interval}
 
@@ -28,10 +29,10 @@ The first implemented method is based on the assumption that the drift is equal 
 To compensate for the drift, a straight with the inverse slope and starting point in the first data point of the interval has been calculated. The middle points between the original data and the new calculated straight build the correction of the data signal.
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{figures/old_correction_sub1}
-	\caption{The original data of ROI 15 in blue and ROI 23 in yellow. Applied correction of ROI 15's data in red and ROI 23's data in purple.}
+	\caption{Raw signal of ROI 15 in blue and ROI 23 in yellow. Applied correction of ROI 15's data in red and ROI 23's data in purple.}
 	\label{fig:oldcorr}
 \end{figure}
-As it can be seen in figure \ref{fig:oldcorr} this correction only worked partially where several parts showed less drift and lower jumps. Through the method worked at some parts it still had a lot of weak points. Primarily because some jumps had been strengthened. Due to the outcome of this method, the assumption, that the drift is equal in each interval has been discarded. 
+As it can be seen in figure \figref{fig:oldcorr} this correction only worked partially where several parts showed less drift and lower jumps. Through the method worked at some parts it still had a lot of weak points. Primarily because some jumps had been strengthened. Due to the outcome of this method, the assumption, that the drift is equal in each interval has been discarded. 
 
 \textbf{Method 2: Regression of each interval}
 
@@ -43,7 +44,7 @@ The idea is to move the end point of a regression line and the start point of th
 	\caption{Connected regression lines of the original data of region 15 in the uncuffed recording of subject 1 in blue. New created orientation line of the same recording in the same region shown in red.}
 	\label{fig:reg15}
 \end{figure}
-As shown in figure \ref{fig:reg15} the new orientation straight fits the regression lines together without suppressing the shape of the signal. Subsequently the residuals have been added to the new orientation straight, to sustain the ratio between the data points. Figure \ref{fig:corr15} shows the corrected signal wherein the jumps, separated intervals, have been connected and the jumps have been largely corrected.
+As shown in figure \figref{fig:reg15} the new orientation straight fits the regression lines together without suppressing the shape of the signal. Subsequently the residuals have been added to the new orientation straight, to sustain the ratio between the data points. Figure \figref{fig:corr15} shows the corrected signal wherein the jumps, separated intervals, have been connected and the jumps have been largely corrected.
 \begin{figure}[H]
 	\includegraphics[width=0.9\textwidth]{figures/corr15}
 	\caption{Orientation line based on the data of the uncuffed recording of subject 1 in region 15 shown in red. Corrected signal of the same data in yellow.}
