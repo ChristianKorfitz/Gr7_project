@@ -36,15 +36,15 @@ W(t,s) = \int_{-\infty}^{\infty} \frac{1}{s^n} \psi *(\frac{\tau-t}{\s})x(\tau)d
 Where $\psi *(\frac{\tau-t}{\s})$ is the wavelet and $x(\tau)$ is the signal.\cite{Uvo1995, Conraria2011}
 
 The signal or function is put into the continuous wavelet transformation equation \ref{eq:cwt}.
-The wavelet transform will give a scalorgram as an output.
-In Matlab the function CWT can be used to compute the continuous wavelet transformation by inserting the signal and the sampling frequency. This will give a scolargram as shown in  \figref{fig:scolargram}. \cite{mathworks2017} 
-The frequencies in Hz are shown along the y-axis if the sampling frequency is specified, else it will show the normalized frequency in cycles pr. sample. Along the x-axis is the time vector. The scalorgram show the magnitude of the signal to show how the frequency in the signal is distributed. A scale to see the size of the magnitude is also implied.
-% An example of a scalorgram is given in \figref{fig:scolargram}
+The wavelet transform will give a scalogram as an output.
+In Matlab the function CWT can be used to compute the continuous wavelet transformation by inserting the signal and the sampling frequency. This will give a scalogram as shown in  \figref{fig:scalogram}. \cite{mathworks2017} 
+The frequencies in Hz are shown along the y-axis if the sampling frequency is specified, else it will show the normalized frequency in cycles pr. sample. Along the x-axis is the time vector. The scalogram show the magnitude of the signal to show how the frequency in the signal is distributed. A scale to see the size of the magnitude is also implied.
+% An example of a scalogram is given in \figref{fig:scalogram}
 
 \begin{figure}[H]
-	\centering	\includegraphics[width=0.65\textwidth]{figures/scolargram}
+	\centering	\includegraphics[width=0.65\textwidth]{figures/scalogram}
 	\caption{An example of a scalogram, showing frequency content at 32 Hz at time approx. 0.2 sec and 64 Hz at approx. 0.8 sec. \cite{mathworks2017}}
-	\label{fig:scolargram}
+	\label{fig:scalogram}
 \end{figure} \vspace{-.3cm}
 
 The signal of the wavelet is typically of a finite length, which sets some limitations to the CWT, like the edge effect. The cone of influence (COI) shows the regions of the CWT where edge effects become significant. The gray zone are the areas where the edge effects become significant, which means that there will be some uncertainties to the CWT in this zone. \cite{math}\fxnote{mathworks2017??}
