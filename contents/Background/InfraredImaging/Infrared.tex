@@ -50,16 +50,16 @@ This law is important when considering thermal imaging because the sensitivity w
 \textbf{Thermal cameras} \label{sec:cam}
 
 Thermal cameras contain a lens to focus the electromagnetic radiation emitted by an object onto a detector element. A focal plan array (FPA) contains between $384\times 288$ and $1024\times 768$ microbolometers and is often used as detector element in uncooled thermal cameras.\cite{olbrycht2015,optris2009} 
-The thermal radiation focused by the lens warms up the microbolometers in the FPA. Since microbolometers contain temperature-dependent electric resistance, the voltage of the electrical outcome signal is depending on the detected radiation.
-The output is then undergoing amplification before further signal processing that digitalizes the signal into pixels. This allows the final output signal to be viewed as a temperature for the object on an monitor, this is also illustrated on figure \ref{fig:em_spectrum}. \cite{optris2009}
+The thermal radiation focused by the lens warms up the microbolometers in the FPA. This warming is proportional to the detected radiation. Since microbolometers contain temperature-dependent electric resistance, the voltage of the electrical outcome signal is depending on the detected radiation.
+The infrared radiation is detected as an analogue signal by the FPA. An AD-converter prepares the signal for the processor module in the thermal camera. The signal is modified into pixels, what gives an digital image as an output, which contains the temperature informations of the observed object. A schematic representation of this is illustrated on figure \ref{fig:em_spectrum}. \cite{optris2009,ignacio2017}
 
 \begin{figure}[H]                                         
 	\includegraphics[width=.55\textwidth]{figures/IR_cam}  
-	\caption{Simplified block diagram of an standard infrared camera.\cite{optris2009}}
+	\caption{Simplified block diagram of an standard thermal detector.\cite{optris2009}}
 	\label{fig:em_spectrum}  
 \end{figure} 
 
-The infrared radiation is made into an electrical signal in the camera, this data can be used in calculating the temperature for an object by knowing certain variables and putting these into Stefan Boltzmann's equation \ref{eq:stefan}. The emissive power denoted E, is the radiation that the detector in the camera is getting. The variables $\sigma$ are known and $\varepsilon$ is specified for the object that is being measured, eg. the human skin with emissivity between 0.95 to 0.99. The temperature are then the only variable to calculate and this is done for each pixel in the image to make up the complete thermal image of the object. Each pixel will be representing one thermal data. \cite{ignacio2017}
+
 
 
 
