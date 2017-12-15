@@ -1,43 +1,47 @@
-\section{Continous wavelet transformation}
+\section{Time-frequency analysis}
 
-Analysis of the collected data from the thermal camera will be done in the time frequency domain. For this the wavelet transformation will be used to look for specific frequency content in the data. 
+Analysis of the collected data from the thermal camera was done in the time-frequency domain. For this a wavelet transformation was computed to look for specific frequency content in the data. 
+
 Wavelet transformation is practical when looking for signals of lower frequencies compared to the normal Fourier analysis, because of the bigger resolution in the wavelet analysis. Another drawback of the Fourier transform is the loss of time information, which is preserved with the wavelet transformation. \cite{geyer2004}
 
-Both the discrete and the continuous wavelet transformation can be used, but the continuous wavelet transformation has better resolution, why this is being used for interpreting the data.\cite{geyer2004} 
+Both a discrete wavelet transformation (DWT) and the continuous wavelet transformation (CWT) can be used, but the CWT has better resolution, why this was used for computing the frequency content of the data.\cite{geyer2004} 
 
-The continuous wavelet transformation is using a variable sized region windowing technique. Long time intervals are used where low frequency information is computed and short time intervals are used where high frequency information is computed. This is represented in \figref{fig:sigToWave}.
+The CWT is using a variable sized region windowing technique. Long time intervals are used where low frequency information is computed and short time intervals are used where high frequency information is computed. This is represented in \figref{fig:sigToWave}.
 
 \begin{figure}[H]
-	\centering	\includegraphics[width=0.65\textwidth]{figures/signalToWavelet}
-	\caption{Signal to wavelet computation.Modified from \cite{Uvo1995}.}
+	\centering	\includegraphics[width=0.8\textwidth]{figures/signalToWavelet}
+	\caption{Signal in the time domain to wavelet transformation. Modified from \cite{Uvo1995}.}
 	\label{fig:sigToWave}
 \end{figure} \vspace{-.3cm}
 
-The wavelet transform computes both the scale $(s)$ and position $(p)$ for the wavelet transform. 
+The wavelet transform computes both the scale and time, where the scale being the information of the frequencies and the time being the location. The general form of the CWT is stated in equation \ref{eq:cwt}: 
+%\begin{flalign}
+%	C(s,p)=\int_{-\infty}^{\infty}f(t)\Psi (s,p) dt
+%	\label{eq:wave}
+%\end{flalign}
 
 \begin{flalign}
-	C(s,p)=\int_{-\infty}^{\infty}f(t)\Psi (s,p) dt
-	\label{eq:wave}
+	W(\tau,s) = \int_{-\infty}^{\infty} x(\tau)  \frac{1}{\sqrt{ \mid s \mid }} \psi *(\frac{\tau-t}{\s})dt
+	\label{eq:cwt}
 \end{flalign}
 
-To achieve the continuous wavelet transformation, equation \ref{eq:wave}, the signal f(t) is convoluted with the wavelet $\Psi$ to get the wavelet coefficients for s and p. 
+Where $\psi *(\frac{\tau-t}{\s})$ is the wavelet and $x(\tau)$ is the signal time series.\cite{Uvo1995, Conraria2011}
+To achieve the CWT, the signal is convoluted with the wavelet to get the wavelet coefficient $W$ for the specific time $\tau$ and frequency $s$. 
 
-This is done by computing the wavelet of the signal which then is compared to the wavelet for a section at the beginning of the signal. Then $C$ in equation \ref{eq:wave} is calculated for the section of the signal. The wavelet is shifted to the right and repeated until the entire signal is covered. Then the wavelet is scaled and $C$ is computed for the entire signal again for all scales. \cite{Uvo1995}
+This is done by computing the wavelet of the signal which then is compared to the wavelet for a section at the beginning of the signal. Then the coefficients for the specific frequency and time is calculated for the section of the signal. The wavelet is shifted to the right and repeated until the entire signal is covered. Then the wavelet is scaled and the coefficients is computed for the entire signal again for all frequencies. \cite{Uvo1995}
 
-Different wavelets can be used to compute the wavelet transformation. In Matlab the default is the Morlet wavelet. 
+Different wavelets can be used to compute the wavelet transformation. In this study the Morlet wavelet is the used wavelet. 
 
-The general form of the continuous wavelet transform is stated in equation \ref{eq:cwt}:
+The Morlet wavelet is one of the most common wavelets. This wavelet can be seen as analytic, because it has numerical properties and properties of simple conversion from scales to frequencies using equation \ref{eq:freqeq}
 
 \begin{flalign}
-W(t,s) = \int_{-\infty}^{\infty} \frac{1}{s^n} \psi *(\frac{\tau-t}{\s})x(\tau)d\tau
-\label{eq:cwt}
+	f(s)=\frac{w_\psi}{2\pi s}
+	\label{eq:freqeq}
 \end{flalign}
 
-Where $\psi *(\frac{\tau-t}{\s})$ is the wavelet and $x(\tau)$ is the signal.\cite{Uvo1995, Conraria2011}
+Where $w_\psi$ denotes the central frequency properties of the wavelet. \cite{Conraria2011}
 
-The signal or function is put into the continuous wavelet transformation equation \ref{eq:cwt}.
-The wavelet transform will give a scalogram as an output.
-In Matlab the function CWT can be used to compute the continuous wavelet transformation by inserting the signal and the sampling frequency. This will give a scalogram as shown in  \figref{fig:scalogram}. \cite{mathworks2017} 
+In Matlab the cwt(x) function can be used to compute the CWT by inserting the signal as input. By further defining the sampling frequency in the input the frequency of the signal content will be displayed. This will give a scalogram as shown in  \figref{fig:scalogram}. \cite{mathworks2017} 
 The frequencies in Hz are shown along the y-axis if the sampling frequency is specified, else it will show the normalized frequency in cycles pr. sample. Along the x-axis is the time vector. The scalogram show the magnitude of the signal to show how the frequency in the signal is distributed. A scale to see the size of the magnitude is also implied.
 % An example of a scalogram is given in \figref{fig:scalogram}
 
