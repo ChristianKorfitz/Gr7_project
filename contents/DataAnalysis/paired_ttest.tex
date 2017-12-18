@@ -1,9 +1,24 @@
 \section{Statistical approach}
 As the actual distribution of the data is unknown, the statistical approach is based on the assumption that the data is normal distributed due to natural variance within subjects. 
 
-To test if there is a statistical significant difference between the uncuffed and cuffed condition a paired t-test is applied on the outcome data from the scalograms. The approach builds on using the total mean of each frequency band, condensing these down to just one number for each frequency band for one ROI for one subject, the approach of the calculation is explained in \ref{sec:scalogram}. 
+The three frequency bands are divided by white dashed lines in the scalogram seen in \figref{fig:scalogram_corr}.
+To prepare the data for the statistical test, the average magnitude for each time period of each frequency band is first calculated by equation \ref{eq:W_avg}.
+\begin{flalign}
+	W(n_{f})=\frac{1}{N} \sum_{n=1}^{N} W_n(n_{f})
+	\label{eq:W_avg}
+\end{flalign}
+Where N denotes the total number of elements in the frequency band, $W$ is the magnitude of the wavelet, $n_{f}$ is the respective frame and $n$ is the current element of the magnitude of the frequency band.
+
+Then the mean of the average magnitude over the time period is calculated by equation \ref{eq:W_mean}.
+\begin{flalign}
+	W_{mean}=\frac{1}{N_{f}} \sum_{n_f=1}^{N_{f}} W(n_{f})
+	\label{eq:W_mean}
+\end{flalign}
+Where $W_{mean}$ denotes the mean value of the frequency band over the time period and $N_{f}$ is the total number of frames.
+This gives a single value for the specific frequency band to use in the statistical test for comparison between the two conditions.
+
 Before a paired t-test is computed for the data, a boxplot is of the data is shown to get a visual representation of the data of the three frequency bands. 
 
-A paired t-test will be performed on all five regions, where uncuffed is the before condition and cuffed is the after condition. The outcome of the paired t-test will either be rejecting the $h_0$ hypothesis, that there is no difference between the two conditions, or not rejecting the h0 hypothesis, which indicates that there is a difference.
-
-The significance level of 0.05 is used the statistical test. This measures the likelihood of rejecting $h_0$ when it is true, which will lead to a type 1 error. The 0.005 significance level presumes that there is a $5\%$ risk of concluding the sample mean to fall withing the critical region at the level of 0.05 and thereby concluding the wrong assumption. \cite{zar2014}
+A paired t-test will be performed on all five regions, where uncuffed is the before condition and cuffed is the after condition. The outcome of the paired t-test will either be rejecting the null-hypothesis, that there is no difference between the two conditions, or accepting the null-hypothesis, which indicates that there is a difference.
+The significance level of 0.05 is used the statistical test.\cite{zar2014} 
+%This measures the likelihood of rejecting null-hypothesis when it is true, which will lead to a type 1 error. The 0.005 significance level presumes that there is a $5\%$ risk of concluding the sample mean to fall within the critical region at the level of 0.05 and thereby concluding the wrong assumption. 
