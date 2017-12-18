@@ -1,7 +1,7 @@
 \section{Regions of interest}
 
 The regions of interest (ROIs) were chosen as pixel locations in the image on specific places of the hand. ROI were selected on behalf of getting a full representation of the hand. 
-Regions in the fingertips and nail folds are areas where it is easy to access the microcirculatory hemodynamics of the human body according to \cite{Iabichella2006}. 
+Regions in the fingertips and nail folds are areas where it is easy to access the microcirculatory hemodynamics of the human body according to\cite{Iabichella2006}. 
 %This region should therefore be expected to give some information on the changes in capillaries which can be an effect of vasomotion. 
 
 The raw image on \figref{fig:hand} does not provide very good contrast for identifying ROIs. To easier choose ROIs, the raw image was converted to a gray scale image to improve the contrast in the image, this can be seen in \figref{fig:mat2grayHand}. 
@@ -16,17 +16,17 @@ With the improved contrast, 28 ROIs from the hand were chosen on the first image
 
 \begin{figure}[H]
 	\includegraphics[width=0.6\textwidth]{figures/roiHand}  %<--but is not needed.
-	\caption{First thermal image of the uncuffed subject 1's uncuffed recording, with ROI of interest plottet on 28 areas of the hand represented as red circles.}
+	\caption{First thermal image of subject 1's recording while restriction, with ROI of interest plottet on 28 areas of the hand represented as red circles.}
 	\label{fig:roiHand}  %<--give the figure a label, so you can reference!
 \end{figure}
 
-The regions are fixed within the image matrix for the whole image series for each measurement, assuming that the subject was sitting still during the whole data acquisition period. The regions also account for both the uncuffed and cuffed conditions for each subject, assuming that the position of the hand was at the same position in both conditions. 
+The regions are fixed within the image matrix for the whole image series for each measurement, assuming that the subject was sitting still during the whole data acquisition period. The regions also account for both the baseline and restriction recording for each subject, assuming that the position of the hand was at the same position in both conditions. 
 Iterating over the image series saving ROIs into a cell array with data points for each ROI, a vector for the each of the 28 ROI was made to give the pixel intensity variations over the whole measurement. 
 An example of the pixel intensities for subject 1 is shown on \figref{fig:Intensities}.
 
 \begin{figure}[H]
 	\includegraphics[width=1\textwidth]{figures/Intensities}  %<--but is not needed.
-	\caption{Pixel intensity for all 28 ROIs during the uncuffed measurement of subject 1.}
+	\caption{Pixel intensity for all 28 ROIs during the restriction measurement of subject 1.}
 	\label{fig:Intensities}  %<--give the figure a label, so you can reference!
 \end{figure}
 
