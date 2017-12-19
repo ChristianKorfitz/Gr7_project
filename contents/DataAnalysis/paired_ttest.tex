@@ -1,6 +1,7 @@
 \section{Statistical approach}
 As the actual distribution of the data is unknown, the statistical approach was based on the assumption that the data is normal distributed due to natural variance within subjects. 
 
+It is chosen to test for significant difference between the condition by using a paired t-test on the mean magnitude for a frequency band. Using the mean magnitude as feature for the statistical test build on an approach presented in Liu et al.\cite{liu2015} 
 To prepare the data for the paired t-test, first the average magnitudes for each time period of endothelial, neurogenic and myogenic frequency band were calculated by equation \ref{eq:W_avg}.
 \begin{flalign}
 	W(n_{f})=\frac{1}{N} \sum_{n=1}^{N} W_n(n_{f})
@@ -18,6 +19,5 @@ This gives a single value for the specific frequency band to use in the statisti
 
 Before a paired t-test was computed, a box plot was shown to get a visual representation of the mean magnitudes within the three frequency bands. 
 
-A paired t-test was performed on all five regions. The outcome of the paired t-test either be rejects the null-hypothesis, that there is no difference between the two conditions, or accepts the null-hypothesis, which indicates that there is a difference.
-The significance level of 0.05 was used the statistical test.\cite{zar2014} 
+A paired t-test was performed on all five regions. A significance level of 0.05 was used the statistical test.\cite{zar2014} 
 %This measures the likelihood of rejecting null-hypothesis when it is true, which will lead to a type 1 error. The 0.005 significance level presumes that there is a $5\%$ risk of concluding the sample mean to fall within the critical region at the level of 0.05 and thereby concluding the wrong assumption. 
